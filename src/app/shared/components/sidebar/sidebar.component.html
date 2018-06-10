@@ -1,0 +1,21 @@
+<div class="sidebar bg-dark slab-overflow-container" [class.toggled]="!isVisible">
+    <ul class="list-unstyled">
+        <li [class.selected]="selectedMenuId==='ms'"><a (click)="select(undefined,'ms')"><i class="fa fa-fw fa-link"></i> My summary</a></li>
+        <li [class.selected]="selectedMenuId==='os'"><a (click)="select(undefined,'os')"><i class="fa fa-fw fa-link"></i> My organization</a></li>
+        <li [class.selected]="selectedMenuId==='it0'"><a (click)="select(topSkill,'it0')"><i class="fa fa-fw fa-link"></i> Top</a></li>
+
+        <ng-container *ngIf="topSkill && topSkill.children">
+            <li *ngFor="let skill of topSkill.children;let i=index;">
+                <ng-container *ngIf="skill.children && skill.children.length>0">
+                    <a (click)="select(skill,'it'+i)" href="#submenu{{i}}" data-toggle="collapse"><i class="fa fa-fw fa-address-card"></i> {{skill.text}}</a>
+                    <ul id="submenu{{i}}" class="list-unstyled collapse">
+                        <li *ngFor="let subskill of skill.children"><a (click)="select(subskill,'it'+i)">{{subskill.text}}</a></li>
+                    </ul>
+                </ng-container>
+                <ng-container *ngIf="!skill.children || skill.children.length===0">
+                    <a (click)="select(skill,'it'+i)"><i class="fa fa-fw fa-address-card"></i> {{skill.text}}</a>
+                </ng-container>
+            </li>
+        </ng-container>
+    </ul>
+</div>

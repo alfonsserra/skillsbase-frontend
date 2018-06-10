@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="row mt-1">
+        <div class="col-md-6">
+            <systelab-percentage-circle [value]="getProficiency()" [text]="'proficiency'"></systelab-percentage-circle>
+        </div>
+        <div class="col-md-6">
+            <systelab-percentage-circle [value]="getInterest()" [text]="'interest'" [color]="'green'"></systelab-percentage-circle>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-md-6">
+            <skills-table [title]="'Proficiency'" [data]="data.topTenByProficiency"></skills-table>
+        </div>
+        <div class="col-md-6">
+            <skills-table [title]="'Interest'" [data]="data.topTenByInterest"></skills-table>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col p-2">
+            <systelab-chart [labels]="labels" [data]="dataBubble" [legend]="legend" [typeChart]="'bubble'"></systelab-chart>
+        </div>
+    </div>
+
+</div>

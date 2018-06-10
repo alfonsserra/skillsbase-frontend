@@ -1,0 +1,16 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>{{title}}</th>
+        <th>Average</th>
+        <th>#</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let skill of data">
+        <td>{{skill.text}}</td>
+        <td>{{skill.rate}}</td>
+        <td>{{skill.counter}}</td>
+    </tr>
+    </tbody>
+</table>

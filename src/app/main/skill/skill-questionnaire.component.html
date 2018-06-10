@@ -1,0 +1,40 @@
+<p class="level-{{level}} padding-{{level}}" (click)="toggleCollapsed()">{{skill.text}}</p>
+
+<ng-container *ngIf="!collapsed">
+    <div class="row">
+        <label class="col-md-4 mt-2 col-form-label" for="full-width-input">&nbsp;</label>
+        <div class="col-md-4 mt-2 d-flex">
+            <systelab-slider [continuous]="false" [(value)]="skill.proficiency" [min]="0" [max]="10" [step]="1" name="slider1"
+                             (valueChange)="changeProficiencySlider(skill)" class="slab-flex-1"></systelab-slider>
+            <span class="badge badge-success ml-2">{{skill.proficiency}}</span>
+        </div>
+        <div class="col-md-4 mt-2 d-flex">
+
+            <systelab-slider [continuous]="false" [(value)]="skill.interest" [min]="0" [max]="10" [step]="1" name="slider2"
+                             (valueChange)="changeInterestSlider(skill)" class="slab-flex-1"></systelab-slider>
+            <span class="badge badge-success ml-2">{{skill.interest}}</span>
+        </div>
+    </div>
+
+    <div *ngFor="let s of skill.children">
+        <div *ngIf="s.type==='category'">
+            <skill-questionnaire [skill]="s" [level]="level+1"></skill-questionnaire>
+        </div>
+        <div *ngIf="s.type==='skill'">
+            <div class="row">
+                <label class="col-md-4 mt-2 col-form-label label-padding-{{level+1}}" for="full-width-input">{{s.text}}</label>
+                <div class="col-md-4 mt-2 d-flex">
+                    <systelab-slider [continuous]="false" [(value)]="s.proficiency" [min]="0" [max]="10" [step]="1" name="slider1"
+                                     (valueChange)="changeProficiencySlider(s)" class="slab-flex-1"></systelab-slider>
+                    <span class="badge badge-success ml-2">{{s.proficiency}}</span>
+                </div>
+                <div class="col-md-4 mt-2 d-flex">
+                    <systelab-slider [continuous]="false" [(value)]="s.interest" [min]="0" [max]="10" [step]="1" name="slider2"
+                                     (valueChange)="changeInterestSlider(s)" class="slab-flex-1"></systelab-slider>
+                    <span class="badge badge-success ml-2">{{s.interest}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+

@@ -1,0 +1,22 @@
+<div class="d-flex flex-column position-fixed principal-container w-100 h-100">
+
+    <header (clickMenu)="doToggleSideBarVisibility()"></header>
+
+    <div class="slab-flex-1 d-flex">
+        <sidebar class="slab-overflow-container" [topSkill]="topSkill" [isVisible]="isSideBarVisible" (skillSelected)="skillSelected($event)"></sidebar>
+
+        <summary *ngIf="!currentSkill" [data]="organizationSummary" class="slab-flex-1 w-100 mt-4 slab-overflow-container"></summary>
+
+        <form *ngIf="currentSkill" class="w-100 slab-flex-1 d-flex flex-column">
+
+            <systelab-navbar [id]="'navBar2'" [isVertical]="false" [backgroundColor]="'lightgray'" [backgroundHoverColor]="'rgba(21, 143, 239, 0.8)'"
+                             [items]="itemsNav" [fontColor]="'white'" [align]="'right'"></systelab-navbar>
+
+
+            <skill-questionnaire *ngIf="currentNav===0" [skill]="currentSkill" [level]="1" class="slab-flex-1 w-100 p-2 container-fluid slab-overflow-container">
+            </skill-questionnaire>
+
+            <compare *ngIf="currentNav===1" #compare class="d-flex slab-flex-1"></compare>
+        </form>
+    </div>
+</div>
