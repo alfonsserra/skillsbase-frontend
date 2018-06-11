@@ -4,8 +4,10 @@
   background: rgb(53, 58, 64);
 }
 .selected {
-  background: #2d2a23;
+  background: #328bed !important;
+  color: white !important;
 }
+
 
 .sidebar {
   min-width: 250px;
@@ -18,10 +20,7 @@
   color: rgba(255, 255, 255, .75);
   text-decoration: none;
 }
-.sidebar ul li a:hover, .sidebar ul .active a {
-  color: rgba(255, 255, 255, 1);
-  background: rgba(0, 0, 0, .25);
-}
+
 .sidebar ul ul a {
   padding-left: 2.5rem;
   background: rgba(0, 0, 0, .25);
