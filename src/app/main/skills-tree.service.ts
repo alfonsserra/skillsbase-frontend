@@ -28,7 +28,7 @@ export class SkillsTreeService {
     }
   }
 
-  public setSkill(startingSkill: Skill, id: number, proficiency: number, interest: number, individual: boolean): boolean {
+  private setSkill(startingSkill: Skill, id: number, proficiency: number, interest: number, individual: boolean): boolean {
     if (startingSkill.id === id) {
       if (individual) {
         if (proficiency) {
