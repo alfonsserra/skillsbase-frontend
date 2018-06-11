@@ -7,7 +7,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let skill of data">
+    <tr *ngFor="let skill of (data ? data.slice(0,10): [])">
         <td>{{skill.text}}</td>
         <td>{{skill.rate| number:'1.0-2'}}</td>
         <td>{{skill.counter}}</td>

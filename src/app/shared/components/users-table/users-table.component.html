@@ -1,0 +1,14 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>User</th>
+        <th>{{title}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let userrate of data">
+        <td>{{userrate.user.surname}}, {{userrate.user.name}}</td>
+        <td>{{userrate.rate| number:'1.0-2'}}</td>
+    </tr>
+    </tbody>
+</table>

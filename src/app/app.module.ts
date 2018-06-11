@@ -28,6 +28,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { CompareComponent } from './main/compare/compare.component';
 import { SideBarComponent } from './shared/components/sidebar/sidebar.component';
 import { SkillsTableComponent } from './shared/components/skills-table/skills-table.component';
+import { TopUsersComponent } from './main/top-users/top-users.component';
+import { UsersTableComponent } from './shared/components/users-table/users-table.component';
 
 @NgModule({
 	imports:         [
@@ -56,7 +58,9 @@ import { SkillsTableComponent } from './shared/components/skills-table/skills-ta
     SummaryComponent,
     CompareComponent,
     SideBarComponent,
-    SkillsTableComponent
+    SkillsTableComponent,
+    TopUsersComponent,
+    UsersTableComponent
 	],
 	providers:       [
 		{provide: BASE_PATH, useValue: environment.API_BASE_PATH},

@@ -13,10 +13,11 @@
                              [items]="itemsNav" [fontColor]="'white'" [align]="'right'"></systelab-navbar>
 
 
-            <skill-questionnaire *ngIf="currentNav===0" [skill]="currentSkill" [level]="1" class="slab-flex-1 w-100 p-2 container-fluid slab-overflow-container">
+            <skill-questionnaire *ngIf="currentNav===0" [skill]="currentSkill" [level]="1" class="slab-flex-1 w-100 p-4 container-fluid slab-overflow-container">
             </skill-questionnaire>
-
             <compare *ngIf="currentNav===1" #compare class="d-flex slab-flex-1"></compare>
+            <top-users *ngIf="currentNav===2" #topusers [skillId]="currentSkill.id" class="d-flex slab-flex-1"></top-users>
+
         </form>
     </div>
 </div>

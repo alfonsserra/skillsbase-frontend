@@ -11,6 +11,7 @@ import { NavbarItem } from 'systelab-components/widgets/navbar/navbar.component'
 import { timer } from 'rxjs/index';
 import { SummaryService } from '../shared/api/summary.service';
 import { OrganizationSummary } from '../shared/model/organization-summary';
+import { TopUsersComponent } from './top-users/top-users.component';
 
 @Component({
   selector:    'main',
@@ -20,6 +21,7 @@ import { OrganizationSummary } from '../shared/model/organization-summary';
 export class MainComponent implements OnInit {
 
   @ViewChild('compare') compare: CompareComponent;
+  @ViewChild('topusers') topusers: TopUsersComponent;
 
   public isSideBarVisible = true;
   public currentNav = 0;
@@ -38,6 +40,7 @@ export class MainComponent implements OnInit {
 
     this.itemsNav.push(new NavbarItem(0, 'Assessment', '', false, true, true, () => this.selectNav(0)));
     this.itemsNav.push(new NavbarItem(1, 'Organization', '', false, false, true, () => this.selectNav(1)));
+    this.itemsNav.push(new NavbarItem(2, 'Top ten', '', false, false, true, () => this.selectNav(2)));
     this.loadTree();
   }
 
@@ -127,6 +130,9 @@ export class MainComponent implements OnInit {
     this.currentSkill = skill;
     if (this.compare) {
       this.compare.doUpdate(skill);
+    }
+    if (this.topusers) {
+      this.topusers.doUpdate(skill.id);
     }
   }
 
