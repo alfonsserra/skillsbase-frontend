@@ -7,6 +7,7 @@ import { SummaryService } from '../shared/api/summary.service';
 import { Observable } from 'rxjs/Rx';
 import { OrganizationSummary } from '../shared/model/organization-summary';
 import { map } from 'rxjs/internal/operators';
+import { SkillToImprovement } from '../shared/model/skill-improvement';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,8 @@ export class SkillsTreeService {
   }
 
   public initSkill(startingSkill: Skill) {
+    startingSkill.isProficiencyAssessed = false;
+    startingSkill.isInterestAssessed = false;
     startingSkill.proficiency = 0;
     startingSkill.interest = 0;
 
@@ -33,9 +36,11 @@ export class SkillsTreeService {
       if (individual) {
         if (proficiency) {
           startingSkill.proficiency = proficiency;
+          startingSkill.isProficiencyAssessed = true;
         }
         if (interest) {
           startingSkill.interest = interest;
+          startingSkill.isInterestAssessed = true;
         }
       } else {
         if (proficiency) {
@@ -86,6 +91,17 @@ export class SkillsTreeService {
             return organizationSummary;
           }
         ));
+  }
+
+  public getSkillsKeenToImprove(startingSkill: Skill): Array<SkillToImprovement> {
+    const skills = new Array<SkillToImprovement>();
+    skills.push({skill: startingSkill, improvement: (startingSkill.interest - startingSkill.proficiency)});
+    if (startingSkill.children) {
+      for (let i = 0; i < startingSkill.children.length; i++) {
+        skills.concat(this.getSkillsKeenToImprove(startingSkill.children[i]));
+      }
+    }
+    return skills;
   }
 
 }
