@@ -31,6 +31,10 @@ export interface Skill {
   interest?: number;
   proficiency?: number;
 
+  isProficiencyAssessed?: boolean;
+  isInterestAssessed?: boolean;
+
+
   averageInterest?: number;
   averageProficiency?: number;
 }

@@ -1,8 +1,8 @@
-<p class="level-{{level}} padding-{{level}}" (click)="toggleCollapsed()">{{skill.text}}</p>
+<p class="level-{{level}} padding-{{level}}"  [class.partial]="!skill.isProficiencyAssessed || !skill.isInterestAssessed"  (click)="toggleCollapsed()">{{skill.text}}</p>
 
 <ng-container *ngIf="!collapsed">
     <div class="row">
-        <label class="col-md-4 mt-2 col-form-label" for="full-width-input">&nbsp;</label>
+        <label class="col-md-4 mt-2 col-form-label">&nbsp;</label>
         <div class="col-md-4 mt-2 d-flex">
             <systelab-slider [continuous]="false" [(value)]="skill.proficiency" [min]="0" [max]="10" [step]="1" name="slider1"
                              (valueChange)="changeProficiencySlider(skill)" class="slab-flex-1"></systelab-slider>
@@ -22,7 +22,7 @@
         </div>
         <div *ngIf="s.type==='skill'">
             <div class="row">
-                <label class="col-md-4 mt-2 col-form-label label-padding-{{level+1}}" for="full-width-input">{{s.text}}</label>
+                <label class="col-md-4 mt-2 col-form-label label-padding-{{level+1}}" [class.partial]="!s.isProficiencyAssessed || !s.isInterestAssessed">{{s.text}}</label>
                 <div class="col-md-4 mt-2 d-flex">
                     <systelab-slider [continuous]="false" [(value)]="s.proficiency" [min]="0" [max]="10" [step]="1" name="slider1"
                                      (valueChange)="changeProficiencySlider(s)" class="slab-flex-1"></systelab-slider>

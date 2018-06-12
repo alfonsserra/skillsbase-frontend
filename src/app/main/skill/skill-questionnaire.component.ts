@@ -33,7 +33,10 @@ export class SkillQuestionnaireComponent {
 
     this.assessmentService.saveUserSkillAssessment(skillassessment)
       .subscribe(
-        (next) => console.log('proficiency set to ' + s.proficiency));
+        (next) => {
+          console.log('proficiency set to ' + s.proficiency);
+          s.isProficiencyAssessed = true;
+        });
   }
 
   public changeInterestSlider(s: Skill) {
@@ -47,7 +50,9 @@ export class SkillQuestionnaireComponent {
 
     this.assessmentService.saveUserSkillAssessment(skillassessment)
       .subscribe(
-        (next) => console.log('interest set to ' + s.interest));
-    ;
+        (next) => {
+          console.log('interest set to ' + s.interest);
+          s.isInterestAssessed = true;
+        });
   }
 }
