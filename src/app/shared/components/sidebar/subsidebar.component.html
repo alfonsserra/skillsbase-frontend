@@ -1,0 +1,12 @@
+<ng-container *ngIf="isParentOfACategory()">
+    <a (click)="select(skill)" [class.selected]="selectedMenuId==='it'+skill.id" href="#submenu{{skill.id}}" data-toggle="collapse" class="label-padding-{{level}}"><i class="fa fa-fw fa-address-card"></i> {{skill.text}}</a>
+    <ul id="submenu{{skill.id}}" class="list-unstyled collapse">
+        <li *ngFor="let subskill of skill.children">
+            <subsidebar *ngIf="subskill.type==='category'" [skill]="subskill" [selectedMenuId]="selectedMenuId" [level]="level+1" (skillSelected)="select($event,'')"></subsidebar>
+        </li>
+    </ul>
+</ng-container>
+<ng-container *ngIf="!isParentOfACategory()">
+    <a (click)="select(skill)" [class.selected]="selectedMenuId==='it'+skill.id" class="label-padding-{{level}}"><i class="fa fa-fw fa-address-card"></i> {{skill.text}}</a>
+
+</ng-container>

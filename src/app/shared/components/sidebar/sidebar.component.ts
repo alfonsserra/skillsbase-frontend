@@ -9,15 +9,19 @@ import { Skill } from '../../model/skill';
 export class SideBarComponent {
   public selectedMenuId = 'ms';
 
-
+  public level = 0;
 
   @Output() public skillSelected = new EventEmitter<Skill>();
   @Input() public topSkill: Skill;
   @Input() public isVisible: true;
 
-
-  public select(skill: Skill, selectedMenuId: string) {
-    this.selectedMenuId = selectedMenuId;
+  public select(skill: Skill) {
+    if (!skill) {
+      this.selectedMenuId = 'ms';
+    }
+    else {
+      this.selectedMenuId = 'it' + skill.id;
+    }
     this.skillSelected.emit(skill);
   }
 

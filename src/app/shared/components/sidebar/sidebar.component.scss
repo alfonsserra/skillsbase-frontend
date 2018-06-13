@@ -8,48 +8,31 @@
   color: white !important;
 }
 
-
 .sidebar {
-  min-width: 250px;
-  max-width: 250px;
+  min-width: 300px;
+  max-width: 300px;
   transition: all 0.3s;
 }
-.sidebar ul li a {
-  display: block;
-  padding: .75rem 1rem;
-  color: rgba(255, 255, 255, .75);
-  text-decoration: none;
+
+.sidebar.toggled {
+  margin-left: -350px;
 }
 
-.sidebar ul ul a {
-  padding-left: 2.5rem;
-  background: rgba(0, 0, 0, .25);
-}
-.sidebar [data-toggle="collapse"] {
-  position: relative;
-}
-.sidebar [data-toggle="collapse"]:before {
-  content: "\f0d7";
-  font-family: "FontAwesome";
-  font-weight: 900;
-  position: absolute;
-  right: 1rem;
-}
-.sidebar [aria-expanded="true"] {
-  background: rgba(0, 0, 0, .25);
-}
-.sidebar [aria-expanded="true"]:before {
-  content: "\f0d8";
-}
-.sidebar.toggled {
-  margin-left: -250px;
+a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 3px;
+  text-decoration: none;
+  display: block;
+  color: rgba(255, 255, 255, .75) !important;
 }
 
 @media (max-width: 768px) {
   .sidebar {
-    margin-left: -250px;
+    margin-left: -300px;
   }
   .sidebar.toggled {
     margin-left: 0;
   }
 }
+

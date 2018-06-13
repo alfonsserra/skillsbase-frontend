@@ -30,6 +30,7 @@ import { SideBarComponent } from './shared/components/sidebar/sidebar.component'
 import { SkillsTableComponent } from './shared/components/skills-table/skills-table.component';
 import { TopUsersComponent } from './main/top-users/top-users.component';
 import { UsersTableComponent } from './shared/components/users-table/users-table.component';
+import { SubSideBarComponent } from './shared/components/sidebar/subsidebar.component';
 
 @NgModule({
 	imports:         [
@@ -58,6 +59,7 @@ import { UsersTableComponent } from './shared/components/users-table/users-table
     SummaryComponent,
     CompareComponent,
     SideBarComponent,
+    SubSideBarComponent,
     SkillsTableComponent,
     TopUsersComponent,
     UsersTableComponent

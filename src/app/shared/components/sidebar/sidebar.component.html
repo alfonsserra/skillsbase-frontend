@@ -1,17 +1,9 @@
 <div class="sidebar bg-dark slab-overflow-container" [class.toggled]="!isVisible">
     <ul class="list-unstyled">
-        <li [class.selected]="selectedMenuId==='ms'"><a (click)="select(undefined,'ms')"><i class="fa fa-fw fa-link"></i> Summary</a></li>
+        <li [class.selected]="selectedMenuId==='ms'"><a (click)="select(undefined)"><i class="fa fa-fw fa-link"></i> Summary</a></li>
         <ng-container *ngIf="topSkill && topSkill.children">
-            <li *ngFor="let skill of topSkill.children;let i=index;">
-                <ng-container *ngIf="skill.children && skill.children.length>0">
-                    <a (click)="select(skill,'it'+skill.id)" [class.selected]="selectedMenuId==='it'+skill.id" href="#submenu{{i}}" data-toggle="collapse"><i class="fa fa-fw fa-address-card"></i> {{skill.text}}</a>
-                    <ul id="submenu{{i}}" class="list-unstyled collapse">
-                        <li *ngFor="let subskill of skill.children"><a (click)="select(subskill,'it'+subskill.id)" [class.selected]="selectedMenuId==='it'+subskill.id" >{{subskill.text}}</a></li>
-                    </ul>
-                </ng-container>
-                <ng-container *ngIf="!skill.children || skill.children.length===0">
-                    <a (click)="select(skill,'it'+skill.id)" [class.selected]="selectedMenuId==='it'+skill.id" ><i class="fa fa-fw fa-address-card"></i> {{skill.text}}</a>
-                </ng-container>
+            <li *ngFor="let skill of topSkill.children">
+                <subsidebar [skill]="skill" [selectedMenuId]="selectedMenuId" [level]="level+1" (skillSelected)="select($event)"></subsidebar>
             </li>
         </ng-container>
     </ul>

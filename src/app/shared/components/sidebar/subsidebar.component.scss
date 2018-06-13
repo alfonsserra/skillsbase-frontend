@@ -1,0 +1,58 @@
+
+a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 3px;
+  text-decoration: none;
+  display: block;
+  color: rgba(255, 255, 255, .75) !important;
+}
+:host [data-toggle="collapse"] {
+  position: relative;
+}
+:host [data-toggle="collapse"]:before {
+  content: "\f0d7";
+  font-family: "FontAwesome";
+  font-weight: 900;
+  position: absolute;
+  right: 1rem;
+}
+:host [aria-expanded="true"] {
+}
+:host [aria-expanded="true"]:before {
+  content: "\f0d8";
+}
+
+.selected {
+  background: #328bed !important;
+  color: white !important;
+}
+
+
+.label-padding-2 {
+  padding-left: 15px;
+}
+
+.label-padding-3 {
+  padding-left: 30px;
+}
+
+.label-padding-4 {
+  padding-left: 45px;
+}
+
+.label-padding-5 {
+  padding-left: 60px;
+}
+
+.label-padding-6 {
+  padding-left: 75px;
+}
+
+.label-padding-7 {
+  padding-left: 90px;
+}
+
+.label-padding-8 {
+  padding-left: 105px;
+}
