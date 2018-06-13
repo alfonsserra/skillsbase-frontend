@@ -1,7 +1,7 @@
 <table class="table table-striped">
     <thead>
     <tr>
-        <th>{{title}}</th>
+        <th><i class="fa" [class.fa-heart-o]="!isProficiency" [class.fa-thumbs-o-up]="isProficiency" ></i> {{isProficiency?"Proficiency":"Interest"}}</th>
         <th>Average</th>
         <th>#</th>
     </tr>

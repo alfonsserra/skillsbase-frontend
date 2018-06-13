@@ -9,7 +9,7 @@ import { SkillSummary } from '../../model/skillSummary';
 export class SkillsTableComponent {
 
   @Input() public data: Array<SkillSummary>;
-  @Input() public title;
+  @Input() public isProficiency;
 
   constructor() {
   }

@@ -1,7 +1,7 @@
 <div class="sidebar bg-dark slab-overflow-container" [class.toggled]="!isVisible">
     <ul class="list-unstyled">
-        <li [class.selected]="selectedMenuId==='ms'"><a (click)="select('ms',undefined)"><i class="fa fa-heart-o"></i> Summary</a></li>
-        <li [class.selected]="selectedMenuId==='kti'"><a (click)="select('kti',undefined)"><i class="fa fa-heart-o"></i> Keen to improve</a></li>
+        <li [class.selected]="selectedMenuId==='ms'"><a (click)="select('ms',undefined)"><i class="fa fa-life-ring"></i> Summary</a></li>
+        <li [class.selected]="selectedMenuId==='kti'"><a (click)="select('kti',undefined)"><i class="fa fa-life-ring"></i> Keen to improve</a></li>
         <ng-container *ngIf="topSkill && topSkill.children">
             <li *ngFor="let skill of topSkill.children">
                 <subsidebar [skill]="skill" [selectedMenuId]="selectedMenuId" [level]="level+1" (skillSelected)="select('it',$event)"></subsidebar>

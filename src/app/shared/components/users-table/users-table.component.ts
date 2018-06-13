@@ -10,7 +10,7 @@ import { UserRate } from '../../model/user-rate';
 export class UsersTableComponent {
 
   @Input() public data: Array<UserRate>;
-  @Input() public title;
+  @Input() public isProficiency;
 
   constructor() {
   }
