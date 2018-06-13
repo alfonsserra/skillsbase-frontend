@@ -1,8 +1,6 @@
 <div class="sidebar bg-dark slab-overflow-container" [class.toggled]="!isVisible">
     <ul class="list-unstyled">
         <li [class.selected]="selectedMenuId==='ms'"><a (click)="select(undefined,'ms')"><i class="fa fa-fw fa-link"></i> Summary</a></li>
-        <li [class.selected]="selectedMenuId==='it0'"><a (click)="select(topSkill,'it0')"><i class="fa fa-fw fa-link"></i> Top</a></li>
-
         <ng-container *ngIf="topSkill && topSkill.children">
             <li *ngFor="let skill of topSkill.children;let i=index;">
                 <ng-container *ngIf="skill.children && skill.children.length>0">
