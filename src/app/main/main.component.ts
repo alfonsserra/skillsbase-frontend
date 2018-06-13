@@ -64,7 +64,7 @@ export class MainComponent implements OnInit {
       this.compare.doUpdate(skill);
     }
     if (this.topusers) {
-      this.topusers.doUpdate(skill.id);
+      this.topusers.doUpdate(skill);
     }
   }
 

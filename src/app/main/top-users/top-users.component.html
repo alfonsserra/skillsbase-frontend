@@ -1,10 +1,13 @@
-<div class="container-fluid">
-    <div class="row mt-1">
-        <div class="col-md-6">
-            <users-table [title]="'Proficiency'" [data]="data?.topTenByProficiency"></users-table>
-        </div>
-        <div class="col-md-6">
-            <users-table [title]="'Interest'" [data]="data?.topTenByInterest"></users-table>
+<div class="container-fluid mt-2">
+    <div *ngFor="let skillData of skillsList">
+        <h4>{{skillData.skill.text}}</h4>
+        <div class="row mt-1">
+            <div class="col-md-6">
+                <users-table [title]="'Proficiency'" [data]="skillData.data?.topTenByProficiency"></users-table>
+            </div>
+            <div class="col-md-6">
+                <users-table [title]="'Interest'" [data]="skillData.data?.topTenByInterest"></users-table>
+            </div>
         </div>
     </div>
 </div>
