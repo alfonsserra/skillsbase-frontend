@@ -94,11 +94,13 @@ export class SkillsTreeService {
   }
 
   public getSkillsKeenToImprove(startingSkill: Skill): Array<SkillToImprovement> {
-    const skills = new Array<SkillToImprovement>();
-    skills.push({skill: startingSkill, improvement: (startingSkill.interest - startingSkill.proficiency)});
+    let skills = new Array<SkillToImprovement>();
+    if (startingSkill.interest > startingSkill.proficiency) {
+      skills.push({text: startingSkill.text, current: startingSkill.proficiency, improvement: (startingSkill.interest - startingSkill.proficiency)});
+    }
     if (startingSkill.children) {
       for (let i = 0; i < startingSkill.children.length; i++) {
-        skills.concat(this.getSkillsKeenToImprove(startingSkill.children[i]));
+        skills = skills.concat(this.getSkillsKeenToImprove(startingSkill.children[i]));
       }
     }
     return skills;

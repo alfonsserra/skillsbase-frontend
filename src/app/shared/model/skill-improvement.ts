@@ -1,6 +1,5 @@
-import { Skill } from './skill';
-
 export interface SkillToImprovement {
-  skill?: Skill;
+  text?: string;
+  current?: number;
   improvement?: number;
 }

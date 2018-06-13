@@ -1,0 +1,16 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Skill</th>
+        <th>Improvement</th>
+        <th>Current</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let skill of (data ? data.slice(0,10): [])">
+        <td>{{skill.text}}</td>
+        <td>{{skill.improvement}}</td>
+        <td>{{skill.current}}</td>
+    </tr>
+    </tbody>
+</table>

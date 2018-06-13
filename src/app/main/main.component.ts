@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { I18nService } from 'systelab-translate/lib/i18n.service';
 import { Router } from '@angular/router';
 import { MessagePopupService } from 'systelab-components/widgets/modal/message-popup/message-popup.service';
@@ -22,6 +22,8 @@ export class MainComponent implements OnInit {
 
   @ViewChild('compare') compare: CompareComponent;
   @ViewChild('topusers') topusers: TopUsersComponent;
+
+  selectedMenuId = 'ms';
 
   public isSideBarVisible = true;
   public currentNav = 0;

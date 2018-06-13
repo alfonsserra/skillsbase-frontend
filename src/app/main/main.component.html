@@ -3,9 +3,11 @@
     <header (clickMenu)="doToggleSideBarVisibility()"></header>
 
     <div class="slab-flex-1 d-flex">
-        <sidebar class="slab-overflow-container" [topSkill]="topSkill" [isVisible]="isSideBarVisible" (skillSelected)="skillSelected($event)"></sidebar>
+        <sidebar class="slab-overflow-container" [topSkill]="topSkill" [isVisible]="isSideBarVisible" (skillSelected)="skillSelected($event)"
+        [(selectedMenuId)]="selectedMenuId"></sidebar>
 
-        <summary *ngIf="!currentSkill" [data]="organizationSummary" class="slab-flex-1 w-100 mt-4 slab-overflow-container"></summary>
+        <summary *ngIf="!currentSkill && selectedMenuId==='ms'" [data]="organizationSummary" class="slab-flex-1 w-100 mt-4 slab-overflow-container"></summary>
+        <keen-to-improve *ngIf="!currentSkill && selectedMenuId==='kti'" [skill]="topSkill" class="slab-flex-1 w-100 mt-4 slab-overflow-container"></keen-to-improve>
 
         <form *ngIf="currentSkill" class="w-100 slab-flex-1 d-flex flex-column">
 

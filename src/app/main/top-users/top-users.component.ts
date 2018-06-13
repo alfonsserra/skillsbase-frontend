@@ -35,16 +35,18 @@ export class TopUsersComponent implements OnInit {
 
   private loadTopUsers() {
     this.skillsList = [];
-    this.summaryService.getUserRateSummary(this.skill.id)
-      .subscribe(userRateSummary =>
-        this.skillsList.unshift(new SubSkill(this.skill, userRateSummary)));
-    for (let skill of this.skill.children) {
-      this.summaryService.getUserRateSummary(skill.id)
-        .subscribe(userRateSummary => {
-          if (userRateSummary.topTenByProficiency.length > 0 || userRateSummary.topTenByInterest.length > 0) {
-            this.skillsList.push(new SubSkill(skill, userRateSummary));
-          }
-        });
+    if (this.skill.id) {
+      this.summaryService.getUserRateSummary(this.skill.id)
+        .subscribe(userRateSummary =>
+          this.skillsList.unshift(new SubSkill(this.skill, userRateSummary)));
+      for (let skill of this.skill.children) {
+        this.summaryService.getUserRateSummary(skill.id)
+          .subscribe(userRateSummary => {
+            if (userRateSummary.topTenByProficiency.length > 0 || userRateSummary.topTenByInterest.length > 0) {
+              this.skillsList.push(new SubSkill(skill, userRateSummary));
+            }
+          });
+      }
     }
   }
 }

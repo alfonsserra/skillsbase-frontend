@@ -7,21 +7,22 @@ import { Skill } from '../../model/skill';
   styleUrls:   ['sidebar.component.scss']
 })
 export class SideBarComponent {
-  public selectedMenuId = 'ms';
-
+  @Input() public selectedMenuId = 'ms';
+  @Output() public selectedMenuIdChange = new EventEmitter<string>();
   public level = 0;
 
-  @Output() public skillSelected = new EventEmitter<Skill>();
+  @Output() public skillSelected = new EventEmitter<object>();
   @Input() public topSkill: Skill;
   @Input() public isVisible: true;
 
-  public select(skill: Skill) {
-    if (!skill) {
-      this.selectedMenuId = 'ms';
+  public select(selectMenuItem, skill: Skill) {
+    let optionSelected = '';
+    if (skill) {
+      optionSelected = selectMenuItem + skill.id;
+    } else {
+      optionSelected = selectMenuItem;
     }
-    else {
-      this.selectedMenuId = 'it' + skill.id;
-    }
+    this.selectedMenuIdChange.emit(optionSelected);
     this.skillSelected.emit(skill);
   }
 
