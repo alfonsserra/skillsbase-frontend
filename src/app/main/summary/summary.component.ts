@@ -1,12 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ChartItem } from 'systelab-charts/widgets/chart/chart.component';
+import { Component, Input, OnChanges, OnInit, ViewChild } from '@angular/core';
+import { ChartComponent, ChartItem } from 'systelab-charts/widgets/chart/chart.component';
 import { OrganizationSummary } from '../../shared/model/organization-summary';
 
 @Component({
   selector:    'summary',
   templateUrl: 'summary.component.html'
 })
-export class SummaryComponent implements OnInit {
+export class SummaryComponent implements OnChanges {
+
+  @ViewChild('chart') chart: ChartComponent;
 
   @Input() data: OrganizationSummary;
 
@@ -18,17 +20,37 @@ export class SummaryComponent implements OnInit {
     this.legend = false;
     this.labels = [];
 
-    this.dataBubble.push(new ChartItem('Test 1', [{x: 4, y: 6, r: 4, t: 'Tooltip'}], '', '', true, false, false, 2));
-    this.dataBubble.push(new ChartItem('Test 2', [{x: 2, y: 9, r: 4, t: 'Tooltip'}], '', '', true, false, false, 2));
-    this.dataBubble.push(new ChartItem('Test 3', [{x: 3, y: 6, r: 4, t: 'Tooltip'}], '', '', true, false, false, 2));
-    this.dataBubble.push(new ChartItem('Test 4', [{x: 6, y: 2, r: 4, t: 'Tooltip'}], '', '', true, false, false, 2));
-    this.dataBubble.push(new ChartItem('Test 5', [{x: 1, y: 6, r: 4, t: 'Tooltip'}], '', '', true, false, false, 2));
   }
 
-  public ngOnInit() {
+  public ngOnChanges() {
+    if (this.data) {
+      for (let i = 0; i < this.data.topTenByProficiency.length; i++) {
+        const interest = this.getInterestForSkill(this.data.topTenByProficiency[i].id);
+        this.dataBubble.push(new ChartItem(this.data.topTenByProficiency[i].text, [{
+          x: this.data.topTenByProficiency[i].rate,
+          y: interest,
+          r: 4
+        }], '', '', true, false, false, 2));
 
+      }
+    }
+    if (this.chart) {
+      try {
+        this.chart.doUpdate();
+      } catch (ex) {}
+    }
   }
 
+  private getInterestForSkill(id: number) {
+    if (this.data) {
+      for (let i = 0; i < this.data.topTenByInterest.length; i++) {
+        if (this.data.topTenByInterest[i].id === id) {
+          return this.data.topTenByInterest[i].rate;
+        }
+      }
+    }
+    return 0;
+  }
 
   public getProficiency() {
     return this.data ? Math.round(this.data.proficiency * 10) : 0;
