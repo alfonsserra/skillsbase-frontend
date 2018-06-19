@@ -31,7 +31,7 @@ import { SkillsTableComponent } from './shared/components/skills-table/skills-ta
 import { TopUsersComponent } from './main/top-users/top-users.component';
 import { UsersTableComponent } from './shared/components/users-table/users-table.component';
 import { SubSideBarComponent } from './shared/components/sidebar/subsidebar.component';
-import { KeenToImproveComponent } from './main/keen-to-improve/keen-to-improve.component';
+import { MySummaryComponent } from './main/mysummary/my-summary.component';
 import { SkillsToImproveComponent } from './shared/components/skills-to-improve-table/skills-to-improve-table.component';
 
 @NgModule({
@@ -65,7 +65,7 @@ import { SkillsToImproveComponent } from './shared/components/skills-to-improve-
     SkillsTableComponent,
     TopUsersComponent,
     UsersTableComponent,
-    KeenToImproveComponent,
+    MySummaryComponent,
     SkillsToImproveComponent
 	],
 	providers:       [

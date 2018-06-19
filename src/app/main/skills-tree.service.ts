@@ -31,6 +31,24 @@ export class SkillsTreeService {
     }
   }
 
+  public getNumberOfSkills(startingSkill: Skill, onlyAssessed = false): number {
+
+    let total = 1;
+    if (onlyAssessed) {
+      if (startingSkill.isProficiencyAssessed && startingSkill.isInterestAssessed) {
+        total = 1;
+      } else {
+        total = 0;
+      }
+    }
+    if (startingSkill.children) {
+      for (let i = 0; i < startingSkill.children.length; i++) {
+        total += this.getNumberOfSkills(startingSkill.children[i],onlyAssessed);
+      }
+    }
+    return total;
+  }
+
   private setSkill(startingSkill: Skill, id: number, proficiency: number, interest: number, individual: boolean): boolean {
     if (startingSkill.id === id) {
       if (individual) {
@@ -96,7 +114,11 @@ export class SkillsTreeService {
   public getSkillsKeenToImprove(startingSkill: Skill): Array<SkillToImprovement> {
     let skills = new Array<SkillToImprovement>();
     if (startingSkill.interest > startingSkill.proficiency) {
-      skills.push({text: startingSkill.text, current: startingSkill.proficiency, improvement: (startingSkill.interest - startingSkill.proficiency)});
+      skills.push({
+        text:        startingSkill.text,
+        current:     startingSkill.proficiency,
+        improvement: (startingSkill.interest - startingSkill.proficiency)
+      });
     }
     if (startingSkill.children) {
       for (let i = 0; i < startingSkill.children.length; i++) {

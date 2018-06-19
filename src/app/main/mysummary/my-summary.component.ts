@@ -4,14 +4,16 @@ import { Skill } from '../../shared/model/skill';
 import { SkillToImprovement } from '../../shared/model/skill-improvement';
 
 @Component({
-  selector:    'keen-to-improve',
-  templateUrl: 'keen-to-improve.component.html'
+  selector:    'my-summary',
+  templateUrl: 'my-summary.component.html'
 })
-export class KeenToImproveComponent implements OnInit {
+export class MySummaryComponent implements OnInit {
 
   @Input() public skill: Skill;
 
   public skillsToImprove: Array<SkillToImprovement> = [];
+
+  public percentageOfCompletion = 0;
 
   constructor(protected skillsTreeService: SkillsTreeService) {
   }
@@ -27,5 +29,8 @@ export class KeenToImproveComponent implements OnInit {
         }
         return 0;
       });
+    const totalSkills = this.skillsTreeService.getNumberOfSkills(this.skill, false);
+    const assessedSkills = this.skillsTreeService.getNumberOfSkills(this.skill, true);
+    this.percentageOfCompletion = (assessedSkills / totalSkills) * 100;
   }
 }

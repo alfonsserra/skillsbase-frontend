@@ -1,9 +1,10 @@
 <div class="container-fluid">
     <div class="row mt-1">
         <div class="col-md-6">
-            <skills-to-improve-table [data]="skillsToImprove"></skills-to-improve-table>
+            {{percentageOfCompletion| number:'1.0-2'}}%
         </div>
         <div class="col-md-6">
+            <skills-to-improve-table [data]="skillsToImprove"></skills-to-improve-table>
         </div>
     </div>
 
