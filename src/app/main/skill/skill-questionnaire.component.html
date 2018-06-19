@@ -1,18 +1,21 @@
-<p class="level-{{level}} padding-{{level}}"  [class.partial]="!skill.isProficiencyAssessed || !skill.isInterestAssessed"  (click)="toggleCollapsed()">{{skill.text}}</p>
+<p class="level-{{level}} padding-{{level}}" [class.partial]="!skill.isProficiencyAssessed || !skill.isInterestAssessed" (click)="toggleCollapsed()">{{skill.text}}</p>
 
 <ng-container *ngIf="!collapsed">
     <div class="row">
         <label class="col-md-4 mt-2 col-form-label">&nbsp;</label>
         <div class="col-md-4 mt-2 d-flex">
+            <i class="fa fa-thumbs-o-up image-proficiency"></i>
             <systelab-slider [continuous]="false" [(value)]="skill.proficiency" [min]="0" [max]="5" [step]="1" name="slider1"
                              (valueChange)="changeProficiencySlider(skill)" class="slab-flex-1"></systelab-slider>
-            <span class="badge badge-success ml-2">{{skill.proficiency}}</span>
+            <span class="badge badge-success ml-2 badge-position">{{skill.isProficiencyAssessed?skill.proficiency:'-'}}</span>
+
         </div>
         <div class="col-md-4 mt-2 d-flex">
 
+            <span class="badge badge-success mr-2 badge-position">{{skill.isInterestAssessed?skill.interest:'-'}}</span>
             <systelab-slider [continuous]="false" [(value)]="skill.interest" [min]="0" [max]="5" [step]="1" name="slider2"
                              (valueChange)="changeInterestSlider(skill)" class="slab-flex-1"></systelab-slider>
-            <span class="badge badge-success ml-2">{{skill.interest}}</span>
+            <i class="fa fa-heart-o image-interest"></i>
         </div>
     </div>
 
@@ -24,14 +27,16 @@
             <div class="row">
                 <label class="col-md-4 mt-2 col-form-label label-padding-{{level+1}}" [class.partial]="!s.isProficiencyAssessed || !s.isInterestAssessed">{{s.text}}</label>
                 <div class="col-md-4 mt-2 d-flex">
+                    <i class="fa fa-thumbs-o-up image-proficiency"></i>
                     <systelab-slider [continuous]="false" [(value)]="s.proficiency" [min]="0" [max]="5" [step]="1" name="slider1"
                                      (valueChange)="changeProficiencySlider(s)" class="slab-flex-1"></systelab-slider>
-                    <span class="badge badge-success ml-2">{{s.proficiency}}</span>
+                    <span class="badge badge-success ml-2 badge-position">{{s.isProficiencyAssessed?s.proficiency:'-'}}</span>
                 </div>
                 <div class="col-md-4 mt-2 d-flex">
+                    <span class="badge badge-success mr-2 badge-position">{{s.isInterestAssessed?s.interest:'-'}}</span>
                     <systelab-slider [continuous]="false" [(value)]="s.interest" [min]="0" [max]="5" [step]="1" name="slider2"
                                      (valueChange)="changeInterestSlider(s)" class="slab-flex-1"></systelab-slider>
-                    <span class="badge badge-success ml-2">{{s.interest}}</span>
+                    <i class="fa fa-heart-o image-interest"></i>
                 </div>
             </div>
         </div>
