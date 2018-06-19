@@ -1,4 +1,5 @@
-<p class="level-{{level}} padding-{{level}}" [class.partial]="!skill.isProficiencyAssessed || !skill.isInterestAssessed" (click)="toggleCollapsed()">{{skill.text}}</p>
+<p class="level-{{level}} padding-{{level}}" [class.partial]="!skill.isProficiencyAssessed || !skill.isInterestAssessed" (click)="toggleCollapsed()">
+    <i class="fa mr-2" [class.fa-plus-square-o]="collapsed"  [class.fa-minus-square-o]="!collapsed"></i>{{skill.text}}</p>
 
 <ng-container *ngIf="!collapsed">
     <div class="row">
