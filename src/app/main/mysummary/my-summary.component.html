@@ -1,8 +1,24 @@
 <div class="container-fluid">
     <div class="row mt-1">
-        <div class="col-md-6">
-            {{percentageOfCompletion| number:'1.0-2'}}%
+        <div class="col-md-4">
+            <systelab-percentage-circle [value]="proficiency" [text]="'proficiency'"></systelab-percentage-circle>
         </div>
+        <div class="col-md-4">
+            <systelab-percentage-circle [value]="interest" [text]="'interest'" [color]="'green'"></systelab-percentage-circle>
+        </div>
+        <div class="col-md-4">
+            <systelab-percentage-circle [value]="percentageOfCompletion" [text]="'Completion'" [color]="'green'"></systelab-percentage-circle>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-md-6">
+            <skills-table [isProficiency]="true" [data]="topTenByProficiency"></skills-table>
+        </div>
+        <div class="col-md-6">
+            <skills-table [isProficiency]="false" [data]="topTenByInterest"></skills-table>
+        </div>
+    </div>
+    <div class="row mt-1">
         <div class="col-md-6">
             <skills-to-improve-table [data]="skillsToImprove"></skills-to-improve-table>
         </div>

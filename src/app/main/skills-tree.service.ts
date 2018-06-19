@@ -8,6 +8,7 @@ import { Observable } from 'rxjs/Rx';
 import { OrganizationSummary } from '../shared/model/organization-summary';
 import { map } from 'rxjs/internal/operators';
 import { SkillToImprovement } from '../shared/model/skill-improvement';
+import { SkillSummary } from '../shared/model/skillSummary';
 
 @Injectable({
   providedIn: 'root'
@@ -43,7 +44,7 @@ export class SkillsTreeService {
     }
     if (startingSkill.children) {
       for (let i = 0; i < startingSkill.children.length; i++) {
-        total += this.getNumberOfSkills(startingSkill.children[i],onlyAssessed);
+        total += this.getNumberOfSkills(startingSkill.children[i], onlyAssessed);
       }
     }
     return total;
@@ -123,6 +124,30 @@ export class SkillsTreeService {
     if (startingSkill.children) {
       for (let i = 0; i < startingSkill.children.length; i++) {
         skills = skills.concat(this.getSkillsKeenToImprove(startingSkill.children[i]));
+      }
+    }
+    return skills;
+  }
+
+  public getMySkillsSummary(startingSkill: Skill, isProficiency: boolean): Array<SkillSummary> {
+    let skills = new Array<SkillSummary>();
+    if (isProficiency && startingSkill.isProficiencyAssessed) {
+      skills.push({
+        id:   startingSkill.id,
+        text: startingSkill.text,
+        rate: Number(startingSkill.proficiency)
+      });
+    }
+    if (!isProficiency && startingSkill.isInterestAssessed) {
+      skills.push({
+        id:   startingSkill.id,
+        text: startingSkill.text,
+        rate: Number(startingSkill.interest)
+      });
+    }
+    if (startingSkill.children) {
+      for (let i = 0; i < startingSkill.children.length; i++) {
+        skills = skills.concat(this.getMySkillsSummary(startingSkill.children[i], isProficiency));
       }
     }
     return skills;

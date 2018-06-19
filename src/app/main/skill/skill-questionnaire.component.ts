@@ -24,8 +24,8 @@ export class SkillQuestionnaireComponent {
 
   public changeProficiencySlider(s: Skill) {
     const skillassessment: SkillAssessment = {
-      interest:    s.interest,
-      proficiency: s.proficiency,
+      interest:    Number(s.interest),
+      proficiency: Number(s.proficiency),
       id:          {
         skillId: s.id
       }
@@ -41,8 +41,8 @@ export class SkillQuestionnaireComponent {
 
   public changeInterestSlider(s: Skill) {
     const skillassessment: SkillAssessment = {
-      interest:    s.interest,
-      proficiency: s.proficiency,
+      interest:    Number(s.interest),
+      proficiency: Number(s.proficiency),
       id:          {
         skillId: s.id
       }
