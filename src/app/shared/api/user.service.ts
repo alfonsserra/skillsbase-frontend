@@ -35,6 +35,24 @@ export class UserService extends BaseService {
     });
   }
 
+
+  /**
+   * User Login
+   *
+   * @param login
+   * @param password
+   */
+  public changePassword(oldpassword: string, newpassword: string): Observable<User> {
+
+    const body = new HttpParams().set('oldpassword', oldpassword)
+      .set('newpassword', newpassword);
+
+    return this.httpClient.post<any>(`${this.basePath}/users/password`, body, {
+      headers: this.getAuthorizationHeader()
+    });
+  }
+
+
   /**
    * Create a User
    *

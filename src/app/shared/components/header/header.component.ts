@@ -5,6 +5,7 @@ import { MessagePopupService } from 'systelab-components/widgets/modal/message-p
 import { DialogService } from 'systelab-components/widgets/modal/dialog/dialog.service';
 
 import { I18nService } from 'systelab-translate/lib/i18n.service';
+import { UserService } from '../../api/user.service';
 
 @Component({
   selector:    'header',
@@ -13,12 +14,12 @@ import { I18nService } from 'systelab-translate/lib/i18n.service';
 })
 export class HeaderComponent {
 
-  @Output() public clickMenu= new EventEmitter();
+  @Output() public clickMenu = new EventEmitter();
 
   constructor(protected messagePopupService: MessagePopupService,
-              protected dialogService: DialogService, protected i18nService: I18nService) {
+              protected dialogService: DialogService, protected i18nService: I18nService,
+              protected userService: UserService) {
   }
-
 
   public doChangePassword() {
     const parameters: ChangePasswordDialogParameters = ChangePasswordDialog.getParameters();
@@ -29,16 +30,24 @@ export class HeaderComponent {
   }
 
   public changePassword(oldPassword: string, newPassword: string): Observable<boolean> {
-    if (oldPassword === newPassword) {
-      this.i18nService.get(['ERR_ERROR', 'ERR_IMPOSSIBLE_CHANGE_PASSWORD'])
-        .subscribe((res) => {
-          this.messagePopupService.showErrorPopup(res.COMMON_ERROR, res.COMMON_IMPOSSIBLE_CHANGE_PASSWORD);
-          return observableOf(false);
-        });
 
-    }
+    this.userService.changePassword(oldPassword, newPassword)
+      .subscribe(
+        (user) => {
+          return observableOf(true);
+        },
+        (error) => {
+          this.i18nService.get(['ERR_ERROR', 'ERR_IMPOSSIBLE_CHANGE_PASSWORD'])
+            .subscribe((res) => {
+              this.messagePopupService.showErrorPopup(res.COMMON_ERROR, res.COMMON_IMPOSSIBLE_CHANGE_PASSWORD);
+              return observableOf(false);
+            });
+
+        }
+      );
     return observableOf(true);
   }
+
   public doLogout() {
     window.location.reload();
   }
