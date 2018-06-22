@@ -2,16 +2,16 @@
     <i class="fa mr-2" [class.fa-plus-square-o]="collapsed"  [class.fa-minus-square-o]="!collapsed"></i>{{skill.text}}</p>
 <p markdown>{{skill.comments}}</p>
 <ng-container *ngIf="!collapsed">
-    <div class="row">
-        <label class="col-md-4 mt-2 col-form-label">&nbsp;</label>
-        <div class="col-md-4 mt-2 d-flex">
+    <div class="row" [class.mb-4]="level>1">
+        <label class="col-md-4 mt-2 col-form-label" [class.mt-2]="level===1">&nbsp;</label>
+        <div class="col-md-4 d-flex" [class.mt-2]="level===1">
             <i class="fa fa-thumbs-o-up image-proficiency"></i>
             <systelab-slider [continuous]="false" [(value)]="skill.proficiency" [min]="0" [max]="5" [step]="1" name="slider1"
                              (valueChange)="changeProficiencySlider(skill)" class="slab-flex-1"></systelab-slider>
             <span class="badge badge-success ml-2 badge-position">{{skill.isProficiencyAssessed?skill.proficiency:'-'}}</span>
 
         </div>
-        <div class="col-md-4 mt-2 d-flex">
+        <div class="col-md-4 d-flex" [class.mt-2]="level===1">
 
             <span class="badge badge-success mr-2 badge-position">{{skill.isInterestAssessed?skill.interest:'-'}}</span>
             <systelab-slider [continuous]="false" [(value)]="skill.interest" [min]="0" [max]="5" [step]="1" name="slider2"
