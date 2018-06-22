@@ -15,6 +15,5 @@ export class AppComponent {
     i18nService.use('en')
       .subscribe(() => console.log('Language set to en'),
         (error) => console.log('Error setting the language.'));
-        migrationService.migrate();
   }
 }
