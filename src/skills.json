@@ -1,1638 +1,2871 @@
-[{
-  "id": "24",
-  "parentId": null,
-  "text": "Software Development Life Cycle",
-  "type": "category",
-  "children": [{
-    "id": "27",
-    "parentId": "24",
-    "text": "Requirements Management",
+[
+  {
+    "id": "24",
+    "parentId": null,
+    "text": "Software Development Life Cycle",
     "type": "category",
-    "children": [{
-      "id": "40",
-      "parentId": "27",
-      "text": "JAMA",
-      "type": "category",
-      "children": [{
-        "id": "skill_169",
-        "text": "JAMA Basic Knowledge",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_93",
-        "text": "JAMA API",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_97",
-        "text": "JAMA Administration",
-        "type": "skill",
-        "position": 1
-      }]
-    }, {
-      "id": "94",
-      "parentId": "27",
-      "text": "DOORS",
-      "type": "category",
-      "children": [{
-        "id": "skill_91",
-        "text": "DOORS Basic Knowledge",
-        "type": "skill",
-        "position": 0
-      }]
-    }]
-  }, {
-    "id": "28",
-    "parentId": "24",
-    "text": "Change and Defect Management",
+    "children": [
+      {
+        "id": "27",
+        "parentId": "24",
+        "text": "Requirements Management",
+        "type": "category",
+        "children": [
+          {
+            "id": "40",
+            "parentId": "27",
+            "text": "JAMA",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_169",
+                "text": "JAMA User",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_93",
+                "text": "JAMA API",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_97",
+                "text": "JAMA Administration",
+                "type": "skill",
+                "position": 1
+              }
+            ]
+          },
+          {
+            "id": "94",
+            "parentId": "27",
+            "text": "DOORS",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_91",
+                "text": "DOORS User",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_288",
+                "text": "DOORS Administration",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_289",
+                "text": "DOORS DXL Scripting",
+                "type": "skill",
+                "position": 2
+              }
+            ]
+          },
+          {
+            "id": "112",
+            "parentId": "27",
+            "text": "Cockpit",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_290",
+                "text": "Cockpit User",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_291",
+                "text": "Cockpit Administration",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_292",
+                "text": "Cockpit API",
+                "type": "skill",
+                "position": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "28",
+        "parentId": "24",
+        "text": "Change and Defect Management",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_168",
+            "text": "JIRA User",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_95",
+            "text": "JIRA API",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_96",
+            "text": "JIRA Administration",
+            "type": "skill",
+            "position": 2
+          },
+          {
+            "id": "skill_375",
+            "text": "JAMA User-Defects",
+            "type": "skill",
+            "position": 3
+          },
+          {
+            "id": "skill_373",
+            "text": "IBM Change User",
+            "type": "skill",
+            "position": 3
+          },
+          {
+            "id": "skill_374",
+            "text": "Mantis User",
+            "type": "skill",
+            "position": 4
+          }
+        ]
+      },
+      {
+        "id": "108",
+        "parentId": "24",
+        "text": "Test management",
+        "type": "category",
+        "children": [
+          {
+            "id": "121",
+            "parentId": "108",
+            "text": "Test activities",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_354",
+                "text": "V&amp;V Plan",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_367",
+                "text": "Test Planning",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_355",
+                "text": "Test Definition",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_356",
+                "text": "Test Execution-Functional",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_357",
+                "text": "Functional Test Review",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_372",
+                "text": "Test Execution - Non-Functional",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_358",
+                "text": "Defect Retest",
+                "type": "skill",
+                "position": 4
+              },
+              {
+                "id": "skill_359",
+                "text": "Test reporting (TSR)",
+                "type": "skill",
+                "position": 5
+              },
+              {
+                "id": "skill_385",
+                "text": "Unit Test Review",
+                "type": "skill",
+                "position": 6
+              },
+              {
+                "id": "skill_370",
+                "text": "Traceability Matrix",
+                "type": "skill",
+                "position": 6
+              },
+              {
+                "id": "skill_384",
+                "text": "Test Enviroment Setup\/Maintenance",
+                "type": "skill",
+                "position": 7
+              }
+            ]
+          },
+          {
+            "id": "120",
+            "parentId": "108",
+            "text": "Test types",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_360",
+                "text": "Exploratory Test",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_361",
+                "text": "Web Testing",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_386",
+                "text": "Functional Test",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_368",
+                "text": "Story Testing",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_362",
+                "text": "Mobile Testing",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_371",
+                "text": "Cross-Browsing",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_369",
+                "text": "Acceptance Testing",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_363",
+                "text": "Performance, Stress&amp;amp;Endurance Testing",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_364",
+                "text": "Usability Testing",
+                "type": "skill",
+                "position": 4
+              },
+              {
+                "id": "skill_365",
+                "text": "Big Data Testing",
+                "type": "skill",
+                "position": 5
+              },
+              {
+                "id": "skill_366",
+                "text": "Communications Testing",
+                "type": "skill",
+                "position": 6
+              }
+            ]
+          },
+          {
+            "id": "101",
+            "parentId": "108",
+            "text": "Reporting",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_277",
+                "text": "Allure",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_382",
+                "text": "Test Complete Reports",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_383",
+                "text": "Test Status Report",
+                "type": "skill",
+                "position": 2
+              }
+            ]
+          },
+          {
+            "id": "103",
+            "parentId": "108",
+            "text": "Automation",
+            "type": "category",
+            "children": [
+              {
+                "id": "104",
+                "parentId": "103",
+                "text": "Tools",
+                "type": "category",
+                "children": [
+                  {
+                    "id": "skill_282",
+                    "text": "SOAP UI",
+                    "type": "skill",
+                    "position": 0
+                  },
+                  {
+                    "id": "skill_395",
+                    "text": "Selenium\/Webdriver",
+                    "type": "skill",
+                    "position": 0
+                  },
+                  {
+                    "id": "skill_283",
+                    "text": "Test Complete",
+                    "type": "skill",
+                    "position": 1
+                  },
+                  {
+                    "id": "skill_284",
+                    "text": "Test Left",
+                    "type": "skill",
+                    "position": 2
+                  },
+                  {
+                    "id": "skill_376",
+                    "text": "SilkTest",
+                    "type": "skill",
+                    "position": 3
+                  },
+                  {
+                    "id": "skill_404",
+                    "text": "Microfocus UFT",
+                    "type": "skill",
+                    "position": 3
+                  },
+                  {
+                    "id": "skill_397",
+                    "text": "RIDE",
+                    "type": "skill",
+                    "position": 3
+                  },
+                  {
+                    "id": "skill_379",
+                    "text": "LoadComplete",
+                    "type": "skill",
+                    "position": 4
+                  },
+                  {
+                    "id": "skill_377",
+                    "text": "LoadRunner",
+                    "type": "skill",
+                    "position": 4
+                  },
+                  {
+                    "id": "skill_378",
+                    "text": "SilkPerformer",
+                    "type": "skill",
+                    "position": 5
+                  },
+                  {
+                    "id": "skill_380",
+                    "text": "TestPlant eggPlant",
+                    "type": "skill",
+                    "position": 7
+                  }
+                ]
+              },
+              {
+                "id": "123",
+                "parentId": "103",
+                "text": "Test Scripting",
+                "type": "category",
+                "children": []
+              },
+              {
+                "id": "skill_280",
+                "text": "Unit test",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_279",
+                "text": "Integration test",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_337",
+                "text": "API Testing",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_281",
+                "text": "System test",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_391",
+                "text": "Acceptance Testing",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_400",
+                "text": "Non-functional Testing",
+                "type": "skill",
+                "position": 4
+              }
+            ]
+          },
+          {
+            "id": "118",
+            "parentId": "108",
+            "text": "Tools",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_338",
+                "text": "JAMA Test Management",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_339",
+                "text": "TFS Test Manager",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_396",
+                "text": "HP Quality Center",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_340",
+                "text": "HP QTP",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_341",
+                "text": "DOORS-Test Modules",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_342",
+                "text": "TestLink",
+                "type": "skill",
+                "position": 4
+              },
+              {
+                "id": "skill_403",
+                "text": "HipTest",
+                "type": "skill",
+                "position": 5
+              },
+              {
+                "id": "skill_343",
+                "text": "Zephyr",
+                "type": "skill",
+                "position": 5
+              },
+              {
+                "id": "skill_344",
+                "text": "QA Complete",
+                "type": "skill",
+                "position": 6
+              },
+              {
+                "id": "skill_345",
+                "text": "SilkCentral",
+                "type": "skill",
+                "position": 7
+              },
+              {
+                "id": "skill_346",
+                "text": "TestRail",
+                "type": "skill",
+                "position": 8
+              }
+            ]
+          },
+          {
+            "id": "119",
+            "parentId": "108",
+            "text": "Certifications",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_352",
+                "text": "ISTQB-Foundation Agile Tester",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_348",
+                "text": "ISTQB-Foundation Level",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_349",
+                "text": "ISTQB-Advanced ST\/TAE",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_350",
+                "text": "ISTQB-Advanced TA\/TM\/TTA",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_351",
+                "text": "ISTQB-Expert TM",
+                "type": "skill",
+                "position": 4
+              },
+              {
+                "id": "skill_353",
+                "text": "CAT",
+                "type": "skill",
+                "position": 5
+              },
+              {
+                "id": "skill_347",
+                "text": "TMAP",
+                "type": "skill",
+                "position": 5
+              }
+            ]
+          },
+          {
+            "id": "122",
+            "parentId": "108",
+            "text": "Test Models",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_387",
+                "text": "Risk-Based Testing",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_388",
+                "text": "Requirements-Based Testing",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_389",
+                "text": "Model-Based Testing",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_390",
+                "text": "Mathematical-Based Testing",
+                "type": "skill",
+                "position": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "113",
+        "parentId": "24",
+        "text": "Risk Management",
+        "type": "category",
+        "children": [
+          {
+            "id": "114",
+            "parentId": "113",
+            "text": "Techniques",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_295",
+                "text": "FMEA",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_296",
+                "text": "FTA",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_297",
+                "text": "HAZOP",
+                "type": "skill",
+                "position": 2
+              }
+            ]
+          },
+          {
+            "id": "skill_298",
+            "text": "Risk management activities",
+            "type": "skill",
+            "position": -1
+          },
+          {
+            "id": "skill_299",
+            "text": "Risk Analysis documentation",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_300",
+            "text": "Hazard Analysis",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_402",
+            "text": "Cybersecurity risk management",
+            "type": "skill",
+            "position": 2
+          }
+        ]
+      },
+      {
+        "id": "109",
+        "parentId": "24",
+        "text": "Patterns and Practices",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_126",
+            "text": "Test-Driven Development",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_127",
+            "text": "Domain-Driven Development",
+            "type": "skill",
+            "position": 3
+          },
+          {
+            "id": "skill_286",
+            "text": "Behavior-Driven Development",
+            "type": "skill",
+            "position": 4
+          },
+          {
+            "id": "skill_276",
+            "text": "Mob programming",
+            "type": "skill",
+            "position": 5
+          },
+          {
+            "id": "skill_294",
+            "text": "Mob Testing",
+            "type": "skill",
+            "position": 6
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "parentId": "24",
+        "text": "Version Control",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_48",
+            "text": "Subversion",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_50",
+            "text": "Accurev",
+            "type": "skill",
+            "position": 2
+          },
+          {
+            "id": "skill_51",
+            "text": "CVS",
+            "type": "skill",
+            "position": 3
+          },
+          {
+            "id": "skill_132",
+            "text": "TFS",
+            "type": "skill",
+            "position": 4
+          },
+          {
+            "id": "skill_49",
+            "text": "Git",
+            "type": "skill",
+            "position": 4
+          },
+          {
+            "id": "skill_217",
+            "text": "Github Administration",
+            "type": "skill",
+            "position": 5
+          },
+          {
+            "id": "skill_218",
+            "text": "BitBucket Administration",
+            "type": "skill",
+            "position": 6
+          },
+          {
+            "id": "skill_138",
+            "text": "Branching and merging strategies",
+            "type": "skill",
+            "position": 7
+          }
+        ]
+      },
+      {
+        "id": "30",
+        "parentId": "24",
+        "text": "Dependency Management",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_54",
+            "text": "Maven Basic Knowledge",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_55",
+            "text": "Gradle Basic Knowledge",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_56",
+            "text": "Ant+Ivy Basic Knowledge",
+            "type": "skill",
+            "position": 2
+          },
+          {
+            "id": "skill_57",
+            "text": "npm Basic Knowledge",
+            "type": "skill",
+            "position": 3
+          },
+          {
+            "id": "skill_58",
+            "text": "Bower Basic Knowledge",
+            "type": "skill",
+            "position": 4
+          },
+          {
+            "id": "skill_74",
+            "text": "NuGet Basic Knowledge",
+            "type": "skill",
+            "position": 5
+          }
+        ]
+      },
+      {
+        "id": "88",
+        "parentId": "24",
+        "text": "Code Analysis",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_257",
+            "text": "Sonar Qube",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_268",
+            "text": "Codacy",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_128",
+            "text": "Code review",
+            "type": "skill",
+            "position": 2
+          }
+        ]
+      },
+      {
+        "id": "31",
+        "parentId": "24",
+        "text": "Build tools",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_59",
+            "text": "Ant",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_60",
+            "text": "Maven",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_61",
+            "text": "Gradle",
+            "type": "skill",
+            "position": 2
+          },
+          {
+            "id": "skill_62",
+            "text": "Webpack",
+            "type": "skill",
+            "position": 3
+          },
+          {
+            "id": "skill_75",
+            "text": "MsBuild",
+            "type": "skill",
+            "position": 4
+          },
+          {
+            "id": "skill_381",
+            "text": "CMake",
+            "type": "skill",
+            "position": 5
+          }
+        ]
+      },
+      {
+        "id": "32",
+        "parentId": "24",
+        "text": "Continuous Integration",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_63",
+            "text": "Jenkins\/Hudson",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_64",
+            "text": "Atlassian Bamboo",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_160",
+            "text": "Travis CI",
+            "type": "skill",
+            "position": 2
+          },
+          {
+            "id": "skill_65",
+            "text": "Circle CI",
+            "type": "skill",
+            "position": 2
+          },
+          {
+            "id": "skill_66",
+            "text": "GitLab CI",
+            "type": "skill",
+            "position": 3
+          },
+          {
+            "id": "skill_67",
+            "text": "JetBrains TeamCity",
+            "type": "skill",
+            "position": 4
+          },
+          {
+            "id": "skill_68",
+            "text": "TFS",
+            "type": "skill",
+            "position": 5
+          }
+        ]
+      },
+      {
+        "id": "65",
+        "parentId": "24",
+        "text": "IDE",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_216",
+            "text": "Visual Studio",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_171",
+            "text": "Eclipse",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_172",
+            "text": "IntelliJ Idea",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_173",
+            "text": "Netbeans",
+            "type": "skill",
+            "position": 2
+          },
+          {
+            "id": "skill_137",
+            "text": "ReSharper",
+            "type": "skill",
+            "position": 4
+          }
+        ]
+      },
+      {
+        "id": "77",
+        "parentId": "24",
+        "text": "Artifact Repositories",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_230",
+            "text": "Sonatype Nexus",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_231",
+            "text": "JFrog Artifactory",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_293",
+            "text": "Inedo Proget",
+            "type": "skill",
+            "position": 2
+          }
+        ]
+      },
+      {
+        "id": "60",
+        "parentId": "24",
+        "text": "Installers",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_157",
+            "text": "Installshield",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_158",
+            "text": "WiX Toolset",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_159",
+            "text": "QT Installer Framework",
+            "type": "skill",
+            "position": 2
+          },
+          {
+            "id": "skill_170",
+            "text": "Install4j",
+            "type": "skill",
+            "position": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "78",
+    "parentId": null,
+    "text": "Frameworks",
     "type": "category",
-    "children": [{
-      "id": "skill_168",
-      "text": "JIRA Basic Knowledge",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_95",
-      "text": "JIRA API",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_96",
-      "text": "JIRA Administration",
-      "type": "skill",
-      "position": 2
-    }]
-  }, {
-    "id": "25",
-    "parentId": "24",
-    "text": "Version Control",
+    "children": [
+      {
+        "id": "1",
+        "parentId": "78",
+        "text": "Common",
+        "type": "category",
+        "children": [
+          {
+            "id": "47",
+            "parentId": "1",
+            "text": "Design Patterns",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_118",
+                "text": "MVC",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_119",
+                "text": "MVVM",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_120",
+                "text": "Publisher-Subscriber",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_121",
+                "text": "CQRS",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_152",
+                "text": "Microservices",
+                "type": "skill",
+                "position": 4
+              },
+              {
+                "id": "skill_153",
+                "text": "Unit of Work",
+                "type": "skill",
+                "position": 5
+              },
+              {
+                "id": "skill_154",
+                "text": "Dependency Injection",
+                "type": "skill",
+                "position": 6
+              }
+            ]
+          },
+          {
+            "id": "17",
+            "parentId": "1",
+            "text": "API Definition",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_33",
+                "text": "Basic REST competency",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_34",
+                "text": "Swagger",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_35",
+                "text": "Apiary",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_36",
+                "text": "Apigee",
+                "type": "skill",
+                "position": 3
+              }
+            ]
+          },
+          {
+            "id": "84",
+            "parentId": "1",
+            "text": "Integration",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_250",
+                "text": "ASTM",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_251",
+                "text": "POCT1-A",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_252",
+                "text": "HL7",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_253",
+                "text": "FHIR",
+                "type": "skill",
+                "position": 3
+              }
+            ]
+          },
+          {
+            "id": "80",
+            "parentId": "1",
+            "text": "Data Management",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_11",
+                "text": "SQL",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_122",
+                "text": "SQLite Integration",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_184",
+                "text": "Elasticsearch",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_123",
+                "text": "MongoDB",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_182",
+                "text": "Redis",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_183",
+                "text": "Cassandra",
+                "type": "skill",
+                "position": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "parentId": "78",
+        "text": "Web Frontend",
+        "type": "category",
+        "children": [
+          {
+            "id": "16",
+            "parentId": "15",
+            "text": "HTML and CSS",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_22",
+                "text": "Basic CSS",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_21",
+                "text": "Basic HTML Layout",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_23",
+                "text": "SASS",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_24",
+                "text": "LESS",
+                "type": "skill",
+                "position": 2
+              }
+            ]
+          },
+          {
+            "id": "18",
+            "parentId": "15",
+            "text": "Javascript\/CSS Libraries",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_38",
+                "text": "jQuery",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_39",
+                "text": "Sencha",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_40",
+                "text": "Bootstrap",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_41",
+                "text": "uikit",
+                "type": "skill",
+                "position": 3
+              }
+            ]
+          },
+          {
+            "id": "68",
+            "parentId": "15",
+            "text": "Test",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_178",
+                "text": "Karma",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_181",
+                "text": "Jest",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_180",
+                "text": "Jasmine",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_179",
+                "text": "Protractor",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_269",
+                "text": "xUnit\/jUnit\/nUnit",
+                "type": "skill",
+                "position": 2
+              }
+            ]
+          },
+          {
+            "id": "13",
+            "parentId": "15",
+            "text": "Angular",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_16",
+                "text": "Typescript",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_43",
+                "text": "Functional Reactive Programming (RxJs)",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_167",
+                "text": "Redux",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_18",
+                "text": "Angular Routing",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_20",
+                "text": "Angular-CLI",
+                "type": "skill",
+                "position": 4
+              },
+              {
+                "id": "skill_19",
+                "text": "Basic Angular Framework",
+                "type": "skill",
+                "position": 5
+              }
+            ]
+          },
+          {
+            "id": "19",
+            "parentId": "15",
+            "text": "Other Frameworks",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_53",
+                "text": "Java Server Pages Basic Knowledge",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_52",
+                "text": "Java Server Faces Basic Knowledge",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_42",
+                "text": "GWT Basic Knowledge",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_44",
+                "text": "Basic React.js Framework",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_232",
+                "text": "Basic Angular.js Framework",
+                "type": "skill",
+                "position": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "parentId": "78",
+        "text": "JEE",
+        "type": "category",
+        "children": [
+          {
+            "id": "67",
+            "parentId": "2",
+            "text": "Unit Test",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_175",
+                "text": "JUnit",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_176",
+                "text": "Rest Assured",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_177",
+                "text": "Cucumber",
+                "type": "skill",
+                "position": 2
+              }
+            ]
+          },
+          {
+            "id": "89",
+            "parentId": "2",
+            "text": "Spring boot",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_263",
+                "text": "Spring Core",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_258",
+                "text": "Spring Web",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_259",
+                "text": "Spring Security",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_260",
+                "text": "Spring Data",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_261",
+                "text": "Spring Actuator",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_262",
+                "text": "Spring Testing",
+                "type": "skill",
+                "position": 4
+              }
+            ]
+          },
+          {
+            "id": "95",
+            "parentId": "2",
+            "text": "Specification",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_2",
+                "text": "JAX-RS Basic Knowledge",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_10",
+                "text": "EJB Basic Knowledge",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_166",
+                "text": "JMS Basic Knowledge",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_15",
+                "text": "Message Driven Beans",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_4",
+                "text": "Bean Validation Basic Knowledge",
+                "type": "skill",
+                "position": 4
+              },
+              {
+                "id": "skill_3",
+                "text": "JPA Basic Knowledge",
+                "type": "skill",
+                "position": 4
+              }
+            ]
+          },
+          {
+            "id": "96",
+            "parentId": "2",
+            "text": "ORM",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_5",
+                "text": "Hibernate",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_6",
+                "text": "TopLink",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_7",
+                "text": "EclipseLink",
+                "type": "skill",
+                "position": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "parentId": "78",
+        "text": ".NET",
+        "type": "category",
+        "children": [
+          {
+            "id": "35",
+            "parentId": "6",
+            "text": "Persistence",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_76",
+                "text": "ADO.NET",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_77",
+                "text": "Entity Framework",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_115",
+                "text": "LINQ2SQL",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_116",
+                "text": "nHibernate",
+                "type": "skill",
+                "position": 3
+              }
+            ]
+          },
+          {
+            "id": "36",
+            "parentId": "6",
+            "text": "Desktop",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_79",
+                "text": "WinForms",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_80",
+                "text": "WPF",
+                "type": "skill",
+                "position": 1
+              }
+            ]
+          },
+          {
+            "id": "37",
+            "parentId": "6",
+            "text": "ASP.NET",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_81",
+                "text": "ASP.NET MVC",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_82",
+                "text": "WebAPI",
+                "type": "skill",
+                "position": 1
+              }
+            ]
+          },
+          {
+            "id": "38",
+            "parentId": "6",
+            "text": "Language features",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_83",
+                "text": "LINQ",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_84",
+                "text": "async and await",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_89",
+                "text": "COM Interop",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_90",
+                "text": "Lambda expressions",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_106",
+                "text": "Unmanaged API calls (PInvoke)",
+                "type": "skill",
+                "position": 4
+              },
+              {
+                "id": "skill_107",
+                "text": "Reflection",
+                "type": "skill",
+                "position": 5
+              },
+              {
+                "id": "skill_108",
+                "text": "Strong-naming",
+                "type": "skill",
+                "position": 6
+              },
+              {
+                "id": "skill_130",
+                "text": "ScriptCS",
+                "type": "skill",
+                "position": 7
+              }
+            ]
+          },
+          {
+            "id": "41",
+            "parentId": "6",
+            "text": "Communications",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_98",
+                "text": "WCF",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_99",
+                "text": "MSMQ",
+                "type": "skill",
+                "position": 1
+              }
+            ]
+          },
+          {
+            "id": "42",
+            "parentId": "6",
+            "text": "Inversion Of Control",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_100",
+                "text": "UnityContainer",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_101",
+                "text": "AutoFac",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_102",
+                "text": "Ninject",
+                "type": "skill",
+                "position": 2
+              }
+            ]
+          },
+          {
+            "id": "43",
+            "parentId": "6",
+            "text": "Unit Test",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_103",
+                "text": "RhinoMocks",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_104",
+                "text": "JustMock",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_105",
+                "text": "UMock",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_117",
+                "text": "Coverage",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_270",
+                "text": "xUnit",
+                "type": "skill",
+                "position": 4
+              }
+            ]
+          },
+          {
+            "id": "45",
+            "parentId": "6",
+            "text": "Serialization",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_113",
+                "text": "XML",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_114",
+                "text": "JSON",
+                "type": "skill",
+                "position": 1
+              }
+            ]
+          },
+          {
+            "id": "99",
+            "parentId": "6",
+            "text": "Flavours",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_271",
+                "text": ".NET 4.x",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_272",
+                "text": ".NET core",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_273",
+                "text": ".NET standard",
+                "type": "skill",
+                "position": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "52",
+        "parentId": "78",
+        "text": "C++",
+        "type": "category",
+        "children": [
+          {
+            "id": "58",
+            "parentId": "52",
+            "text": "Libraries",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_144",
+                "text": "ATL",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_143",
+                "text": "ACE",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_145",
+                "text": "Boost",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_146",
+                "text": "QT\/QML",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_147",
+                "text": "POCO",
+                "type": "skill",
+                "position": 4
+              },
+              {
+                "id": "skill_149",
+                "text": "Folly",
+                "type": "skill",
+                "position": 5
+              }
+            ]
+          },
+          {
+            "id": "97",
+            "parentId": "52",
+            "text": "Components",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_148",
+                "text": "OLE\/COM",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_142",
+                "text": "QT\/QML",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_141",
+                "text": "MFC",
+                "type": "skill",
+                "position": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "59",
+        "parentId": "78",
+        "text": "Multiplatform",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_140",
+            "text": "POSIX",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_109",
+            "text": ".NET Core",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_110",
+            "text": "Mono for Xamarin",
+            "type": "skill",
+            "position": 2
+          },
+          {
+            "id": "skill_150",
+            "text": "Ionic",
+            "type": "skill",
+            "position": 3
+          },
+          {
+            "id": "skill_174",
+            "text": "NativeScript",
+            "type": "skill",
+            "position": 4
+          },
+          {
+            "id": "skill_151",
+            "text": "Universal Applications (Microsoft)",
+            "type": "skill",
+            "position": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "61",
+    "parentId": null,
+    "text": "Deployment",
     "type": "category",
-    "children": [{
-      "id": "skill_48",
-      "text": "Subversion",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_50",
-      "text": "Accurev",
-      "type": "skill",
-      "position": 2
-    }, {
-      "id": "skill_51",
-      "text": "CVS",
-      "type": "skill",
-      "position": 3
-    }, {
-      "id": "skill_132",
-      "text": "TFS",
-      "type": "skill",
-      "position": 4
-    }, {
-      "id": "skill_49",
-      "text": "Git",
-      "type": "skill",
-      "position": 4
-    }, {
-      "id": "skill_217",
-      "text": "Github Administration",
-      "type": "skill",
-      "position": 5
-    }, {
-      "id": "skill_218",
-      "text": "BitBucket Administration",
-      "type": "skill",
-      "position": 6
-    }]
-  }, {
-    "id": "30",
-    "parentId": "24",
-    "text": "Dependency Management",
+    "children": [
+      {
+        "id": "79",
+        "parentId": "61",
+        "text": "Virtualization",
+        "type": "category",
+        "children": [
+          {
+            "id": "81",
+            "parentId": "79",
+            "text": "Virtual Machines",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_237",
+                "text": "VirtualBox Basic Knowledge",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_238",
+                "text": "VMware Basic Knowledge",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_242",
+                "text": "Microsoft Hyper-V Basic Knowledge",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_239",
+                "text": "VirtualBox Administration",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_240",
+                "text": "VMware Administration",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_243",
+                "text": "Microsoft Hyper-V Administration",
+                "type": "skill",
+                "position": 5
+              }
+            ]
+          },
+          {
+            "id": "14",
+            "parentId": "79",
+            "text": "Containers",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_29",
+                "text": "Basic Docker Usage",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_30",
+                "text": "Docker image creation",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_31",
+                "text": "Docker Compose",
+                "type": "skill",
+                "position": 2
+              }
+            ]
+          },
+          {
+            "id": "62",
+            "parentId": "79",
+            "text": "Container Orchestration",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_161",
+                "text": "Kubernetes",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_162",
+                "text": "Mesos",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_163",
+                "text": "Apache Marathon",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_164",
+                "text": "Openshift",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_32",
+                "text": "Docker Swarm",
+                "type": "skill",
+                "position": 4
+              },
+              {
+                "id": "skill_165",
+                "text": "Istio",
+                "type": "skill",
+                "position": 5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "83",
+        "parentId": "61",
+        "text": "Message Brokers",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_247",
+            "text": "Kafka Administration",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_248",
+            "text": "ActiveMQ Administration",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_249",
+            "text": "RabbitMQ Administration",
+            "type": "skill",
+            "position": 2
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "parentId": "61",
+        "text": "Data Managent",
+        "type": "category",
+        "children": [
+          {
+            "id": "12",
+            "parentId": "8",
+            "text": "SQL",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_14",
+                "text": "SQL Server Administration",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_241",
+                "text": "SQL Server Backup &amp; Restore",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_12",
+                "text": "mySQL Administration",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_124",
+                "text": "PostgreSQL Administration",
+                "type": "skill",
+                "position": 4
+              },
+              {
+                "id": "skill_13",
+                "text": "Oracle Administration",
+                "type": "skill",
+                "position": 5
+              },
+              {
+                "id": "skill_28",
+                "text": "Oracle Backup &amp; Restore",
+                "type": "skill",
+                "position": 6
+              }
+            ]
+          },
+          {
+            "id": "49",
+            "parentId": "8",
+            "text": "NoSQL",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_233",
+                "text": "MongoDB Administration",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_234",
+                "text": "Redis Administration",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_235",
+                "text": "Cassandra Administration",
+                "type": "skill",
+                "position": 5
+              },
+              {
+                "id": "skill_236",
+                "text": "Elasticsearch Administration",
+                "type": "skill",
+                "position": 7
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "71",
+        "parentId": "61",
+        "text": "Monitoring",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_189",
+            "text": "Nagios",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_186",
+            "text": "Datadog",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_185",
+            "text": "ELK",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_187",
+            "text": "Grafana",
+            "type": "skill",
+            "position": 2
+          },
+          {
+            "id": "skill_188",
+            "text": "Prometheus",
+            "type": "skill",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "id": "91",
+        "parentId": "61",
+        "text": "Integration tools",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_254",
+            "text": "NextGen Connect Integration Engine (Mirth)",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_256",
+            "text": "Rhapsody",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_255",
+            "text": "InterSystems Ensemble",
+            "type": "skill",
+            "position": 1
+          }
+        ]
+      },
+      {
+        "id": "92",
+        "parentId": "61",
+        "text": "Operating Systems",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_264",
+            "text": "Linux",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_265",
+            "text": "Windows",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_266",
+            "text": "Mac OS X",
+            "type": "skill",
+            "position": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "106",
+    "parentId": null,
+    "text": "Cybersecurity",
     "type": "category",
-    "children": [{
-      "id": "skill_54",
-      "text": "Maven Basic Knowledge",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_55",
-      "text": "Gradle Basic Knowledge",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_56",
-      "text": "Ant+Ivy Basic Knowledge",
-      "type": "skill",
-      "position": 2
-    }, {
-      "id": "skill_57",
-      "text": "npm Basic Knowledge",
-      "type": "skill",
-      "position": 3
-    }, {
-      "id": "skill_58",
-      "text": "Bower Basic Knowledge",
-      "type": "skill",
-      "position": 4
-    }, {
-      "id": "skill_74",
-      "text": "NuGet Basic Knowledge",
-      "type": "skill",
-      "position": 5
-    }]
-  }, {
-    "id": "88",
-    "parentId": "24",
-    "text": "Code Analysis",
+    "children": [
+      {
+        "id": "107",
+        "parentId": "106",
+        "text": "Tools",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_332",
+            "text": "OpenVAS",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_333",
+            "text": "Wireshark",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_334",
+            "text": "NMap",
+            "type": "skill",
+            "position": 2
+          },
+          {
+            "id": "skill_335",
+            "text": "OpenSSH",
+            "type": "skill",
+            "position": 3
+          },
+          {
+            "id": "skill_336",
+            "text": "Snyk",
+            "type": "skill",
+            "position": 4
+          },
+          {
+            "id": "skill_398",
+            "text": "Burp Suite",
+            "type": "skill",
+            "position": 5
+          }
+        ]
+      },
+      {
+        "id": "115",
+        "parentId": "106",
+        "text": "Technologies",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_301",
+            "text": "Antivirus (AV)",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_302",
+            "text": "Firewall (FW)",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_303",
+            "text": "Web application firewall (WAF)",
+            "type": "skill",
+            "position": 2
+          },
+          {
+            "id": "skill_304",
+            "text": "Intrusion detection system (IDS)",
+            "type": "skill",
+            "position": 3
+          },
+          {
+            "id": "skill_305",
+            "text": "Mobile device management  (MDM)",
+            "type": "skill",
+            "position": 4
+          },
+          {
+            "id": "skill_306",
+            "text": "Network Access Control (NAC)",
+            "type": "skill",
+            "position": 5
+          },
+          {
+            "id": "skill_307",
+            "text": "Public key infraestructure (PKI)",
+            "type": "skill",
+            "position": 6
+          },
+          {
+            "id": "skill_308",
+            "text": "Security information and Event management (SIEM)",
+            "type": "skill",
+            "position": 7
+          },
+          {
+            "id": "skill_309",
+            "text": "Internet of things security (IoT)",
+            "type": "skill",
+            "position": 8
+          },
+          {
+            "id": "skill_310",
+            "text": "Cloud security",
+            "type": "skill",
+            "position": 9
+          }
+        ]
+      },
+      {
+        "id": "116",
+        "parentId": "106",
+        "text": "Ethical Hacking",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_311",
+            "text": "Footprinting &amp; reconnaissance",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_312",
+            "text": "Scanning",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_313",
+            "text": "Enumeration",
+            "type": "skill",
+            "position": 2
+          },
+          {
+            "id": "skill_314",
+            "text": "Sniffing",
+            "type": "skill",
+            "position": 3
+          },
+          {
+            "id": "skill_315",
+            "text": "Social engineering",
+            "type": "skill",
+            "position": 4
+          },
+          {
+            "id": "skill_316",
+            "text": "System hacking",
+            "type": "skill",
+            "position": 5
+          },
+          {
+            "id": "skill_317",
+            "text": "Web application hacking",
+            "type": "skill",
+            "position": 6
+          },
+          {
+            "id": "skill_318",
+            "text": "Communications hacking",
+            "type": "skill",
+            "position": 7
+          },
+          {
+            "id": "skill_319",
+            "text": "Mobile device hacking",
+            "type": "skill",
+            "position": 8
+          },
+          {
+            "id": "skill_320",
+            "text": "Cryptography",
+            "type": "skill",
+            "position": 9
+          },
+          {
+            "id": "skill_321",
+            "text": "Cracking",
+            "type": "skill",
+            "position": 10
+          },
+          {
+            "id": "skill_322",
+            "text": "Evading security controls",
+            "type": "skill",
+            "position": 11
+          }
+        ]
+      },
+      {
+        "id": "117",
+        "parentId": "106",
+        "text": "Regulatory",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_323",
+            "text": "ISO 27001",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_324",
+            "text": "ISO 27002",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_325",
+            "text": "ISO 27005",
+            "type": "skill",
+            "position": 2
+          },
+          {
+            "id": "skill_326",
+            "text": "ISO 31000",
+            "type": "skill",
+            "position": 3
+          },
+          {
+            "id": "skill_327",
+            "text": "ISO 62304",
+            "type": "skill",
+            "position": 4
+          },
+          {
+            "id": "skill_328",
+            "text": "ISO 80001",
+            "type": "skill",
+            "position": 5
+          },
+          {
+            "id": "skill_329",
+            "text": "ISO 14971",
+            "type": "skill",
+            "position": 6
+          },
+          {
+            "id": "skill_330",
+            "text": "FDA-Premarket",
+            "type": "skill",
+            "position": 7
+          },
+          {
+            "id": "skill_331",
+            "text": "FDA-Postmarket",
+            "type": "skill",
+            "position": 8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "90",
+    "parentId": null,
+    "text": "Other",
     "type": "category",
-    "children": [{
-      "id": "skill_257",
-      "text": "Sonar Qube",
-      "type": "skill",
-      "position": 0
-    }]
-  }, {
-    "id": "31",
-    "parentId": "24",
-    "text": "Build tools",
-    "type": "category",
-    "children": [{
-      "id": "skill_59",
-      "text": "Ant",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_60",
-      "text": "Maven",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_61",
-      "text": "Gradle",
-      "type": "skill",
-      "position": 2
-    }, {
-      "id": "skill_62",
-      "text": "Webpack",
-      "type": "skill",
-      "position": 3
-    }, {
-      "id": "skill_75",
-      "text": "MsBuild",
-      "type": "skill",
-      "position": 4
-    }]
-  }, {
-    "id": "32",
-    "parentId": "24",
-    "text": "Continuous Integration",
-    "type": "category",
-    "children": [{
-      "id": "skill_63",
-      "text": "Jenkins\/Hudson",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_64",
-      "text": "Atlassian Bamboo",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_160",
-      "text": "Travis CI",
-      "type": "skill",
-      "position": 2
-    }, {
-      "id": "skill_65",
-      "text": "Circle CI",
-      "type": "skill",
-      "position": 2
-    }, {
-      "id": "skill_66",
-      "text": "GitLab CI",
-      "type": "skill",
-      "position": 3
-    }, {
-      "id": "skill_67",
-      "text": "JetBrains TeamCity",
-      "type": "skill",
-      "position": 4
-    }, {
-      "id": "skill_68",
-      "text": "TFS",
-      "type": "skill",
-      "position": 5
-    }]
-  }, {
-    "id": "65",
-    "parentId": "24",
-    "text": "IDE",
-    "type": "category",
-    "children": [{
-      "id": "skill_216",
-      "text": "Visual Studio",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_171",
-      "text": "Eclipse",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_172",
-      "text": "IntelliJ Idea",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_173",
-      "text": "Netbeans",
-      "type": "skill",
-      "position": 2
-    }, {
-      "id": "skill_137",
-      "text": "ReSharper",
-      "type": "skill",
-      "position": 4
-    }]
-  }, {
-    "id": "60",
-    "parentId": "24",
-    "text": "Installers",
-    "type": "category",
-    "children": [{
-      "id": "skill_157",
-      "text": "Installshield",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_158",
-      "text": "WiX Toolset",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_159",
-      "text": "QT Installer Framework",
-      "type": "skill",
-      "position": 2
-    }, {
-      "id": "skill_170",
-      "text": "Install4j",
-      "type": "skill",
-      "position": 3
-    }]
-  }, {
-    "id": "77",
-    "parentId": "24",
-    "text": "Artifact Repositories",
-    "type": "category",
-    "children": [{
-      "id": "skill_230",
-      "text": "Sonatype Nexus",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_231",
-      "text": "JFrog Artifactory",
-      "type": "skill",
-      "position": 1
-    }]
-  }]
-}, {
-  "id": "78",
-  "parentId": null,
-  "text": "Frameworks",
-  "type": "category",
-  "children": [{
-    "id": "15",
-    "parentId": "78",
-    "text": "Web Frontend",
-    "type": "category",
-    "children": [{
-      "id": "98",
-      "parentId": "15",
-      "text": "HTML",
-      "type": "category",
-      "children": [{
-        "id": "skill_21",
-        "text": "Basic HTML Layout",
-        "type": "skill",
-        "position": 0
-      }]
-    }, {
-      "id": "16",
-      "parentId": "15",
-      "text": "CSS",
-      "type": "category",
-      "children": [{
-        "id": "skill_22",
-        "text": "Basic CSS",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_23",
-        "text": "SASS",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_24",
-        "text": "LESS",
-        "type": "skill",
-        "position": 2
-      }]
-    }, {
-      "id": "18",
-      "parentId": "15",
-      "text": "Javascript\/CSS Libraries",
-      "type": "category",
-      "children": [{
-        "id": "skill_38",
-        "text": "jQuery",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_39",
-        "text": "Sencha",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_40",
-        "text": "Bootstrap",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_41",
-        "text": "uikit",
-        "type": "skill",
-        "position": 3
-      }]
-    }, {
-      "id": "68",
-      "parentId": "15",
-      "text": "Test",
-      "type": "category",
-      "children": [{
-        "id": "skill_178",
-        "text": "Karma",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_181",
-        "text": "Jest",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_180",
-        "text": "Jasmine",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_179",
-        "text": "Protractor",
-        "type": "skill",
-        "position": 1
-      }]
-    }, {
-      "id": "13",
-      "parentId": "15",
-      "text": "Angular",
-      "type": "category",
-      "children": [{
-        "id": "skill_16",
-        "text": "Typescript",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_43",
-        "text": "Functional Reactive Programming (RxJs)",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_167",
-        "text": "Redux",
-        "type": "skill",
-        "position": 3
-      }, {
-        "id": "skill_18",
-        "text": "Angular Routing",
-        "type": "skill",
-        "position": 3
-      }, {
-        "id": "skill_20",
-        "text": "Angular-CLI",
-        "type": "skill",
-        "position": 4
-      }, {
-        "id": "skill_19",
-        "text": "Basic Angular Framework",
-        "type": "skill",
-        "position": 5
-      }]
-    }, {
-      "id": "19",
-      "parentId": "15",
-      "text": "Other Frameworks",
-      "type": "category",
-      "children": [{
-        "id": "skill_53",
-        "text": "Java Server Pages Basic Knowledge",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_52",
-        "text": "Java Server Faces Basic Knowledge",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_42",
-        "text": "GWT Basic Knowledge",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_44",
-        "text": "Basic React.js Framework",
-        "type": "skill",
-        "position": 3
-      }, {
-        "id": "skill_232",
-        "text": "Basic Angular.js Framework",
-        "type": "skill",
-        "position": 4
-      }]
-    }]
-  }, {
-    "id": "2",
-    "parentId": "78",
-    "text": "JEE",
-    "type": "category",
-    "children": [{
-      "id": "67",
-      "parentId": "2",
-      "text": "Unit Test",
-      "type": "category",
-      "children": [{
-        "id": "skill_175",
-        "text": "JUnit",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_176",
-        "text": "Rest Assured",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_177",
-        "text": "Cucumber",
-        "type": "skill",
-        "position": 2
-      }]
-    }, {
-      "id": "89",
-      "parentId": "2",
-      "text": "Spring boot",
-      "type": "category",
-      "children": [{
-        "id": "skill_263",
-        "text": "Spring Core",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_258",
-        "text": "Spring Web",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_259",
-        "text": "Spring Security",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_260",
-        "text": "Spring Data",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_261",
-        "text": "Spring Actuator",
-        "type": "skill",
-        "position": 3
-      }, {
-        "id": "skill_262",
-        "text": "Spring Testing",
-        "type": "skill",
-        "position": 4
-      }]
-    }, {
-      "id": "95",
-      "parentId": "2",
-      "text": "Specification",
-      "type": "category",
-      "children": [{
-        "id": "skill_2",
-        "text": "JAX-RS Basic Knowledge",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_10",
-        "text": "EJB Basic Knowledge",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_166",
-        "text": "JMS Basic Knowledge",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_15",
-        "text": "Message Driven Beans",
-        "type": "skill",
-        "position": 3
-      }, {
-        "id": "skill_3",
-        "text": "JPA Basic Knowledge",
-        "type": "skill",
-        "position": 4
-      }, {
-        "id": "skill_4",
-        "text": "Bean Validation Basic Knowledge",
-        "type": "skill",
-        "position": 4
-      }]
-    }, {
-      "id": "96",
-      "parentId": "2",
-      "text": "ORM",
-      "type": "category",
-      "children": [{
-        "id": "skill_5",
-        "text": "Hibernate",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_6",
-        "text": "TopLink",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_7",
-        "text": "EclipseLink",
-        "type": "skill",
-        "position": 2
-      }]
-    }]
-  }, {
-    "id": "6",
-    "parentId": "78",
-    "text": ".NET",
-    "type": "category",
-    "children": [{
-      "id": "35",
-      "parentId": "6",
-      "text": "Persistence",
-      "type": "category",
-      "children": [{
-        "id": "skill_76",
-        "text": "ADO.NET",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_77",
-        "text": "Entity Framework",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_115",
-        "text": "LINQ2SQL",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_116",
-        "text": "nHibernate",
-        "type": "skill",
-        "position": 3
-      }]
-    }, {
-      "id": "36",
-      "parentId": "6",
-      "text": "Desktop",
-      "type": "category",
-      "children": [{
-        "id": "skill_79",
-        "text": "WinForms",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_80",
-        "text": "WPF",
-        "type": "skill",
-        "position": 1
-      }]
-    }, {
-      "id": "37",
-      "parentId": "6",
-      "text": "ASP.NET",
-      "type": "category",
-      "children": [{
-        "id": "skill_81",
-        "text": "ASP.NET MVC",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_82",
-        "text": "WebAPI",
-        "type": "skill",
-        "position": 1
-      }]
-    }, {
-      "id": "38",
-      "parentId": "6",
-      "text": "Language features",
-      "type": "category",
-      "children": [{
-        "id": "skill_83",
-        "text": "LINQ",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_84",
-        "text": "async and await",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_89",
-        "text": "COM Interop",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_90",
-        "text": "Lambda expressions",
-        "type": "skill",
-        "position": 3
-      }, {
-        "id": "skill_106",
-        "text": "Unmanaged API calls (PInvoke)",
-        "type": "skill",
-        "position": 4
-      }, {
-        "id": "skill_107",
-        "text": "Reflection",
-        "type": "skill",
-        "position": 5
-      }, {
-        "id": "skill_108",
-        "text": "Strong-naming",
-        "type": "skill",
-        "position": 6
-      }, {
-        "id": "skill_130",
-        "text": "ScriptCS",
-        "type": "skill",
-        "position": 7
-      }]
-    }, {
-      "id": "41",
-      "parentId": "6",
-      "text": "Communications",
-      "type": "category",
-      "children": [{
-        "id": "skill_98",
-        "text": "WCF",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_99",
-        "text": "MSMQ",
-        "type": "skill",
-        "position": 1
-      }]
-    }, {
-      "id": "42",
-      "parentId": "6",
-      "text": "Inversion Of Control",
-      "type": "category",
-      "children": [{
-        "id": "skill_100",
-        "text": "UnityContainer",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_101",
-        "text": "AutoFac",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_102",
-        "text": "Ninject",
-        "type": "skill",
-        "position": 2
-      }]
-    }, {
-      "id": "43",
-      "parentId": "6",
-      "text": "Unit Test",
-      "type": "category",
-      "children": [{
-        "id": "skill_103",
-        "text": "RhinoMocks",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_104",
-        "text": "JustMock",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_105",
-        "text": "UMock",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_117",
-        "text": "Coverage",
-        "type": "skill",
-        "position": 3
-      }]
-    }, {
-      "id": "45",
-      "parentId": "6",
-      "text": "Serialization",
-      "type": "category",
-      "children": [{
-        "id": "skill_113",
-        "text": "XML",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_114",
-        "text": "JSON",
-        "type": "skill",
-        "position": 1
-      }]
-    }]
-  }, {
-    "id": "52",
-    "parentId": "78",
-    "text": "C++",
-    "type": "category",
-    "children": [{
-      "id": "54",
-      "parentId": "52",
-      "text": "Language features",
-      "type": "category",
-      "children": [{
-        "id": "skill_133",
-        "text": "Threading \/ Concurrency",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_134",
-        "text": "Lambda expressions",
-        "type": "skill",
-        "position": 1
-      }]
-    }, {
-      "id": "57",
-      "parentId": "52",
-      "text": "Desktop",
-      "type": "category",
-      "children": [{
-        "id": "skill_141",
-        "text": "MFC",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_142",
-        "text": "QT\/QML",
-        "type": "skill",
-        "position": 1
-      }]
-    }, {
-      "id": "58",
-      "parentId": "52",
-      "text": "Libraries",
-      "type": "category",
-      "children": [{
-        "id": "skill_143",
-        "text": "ACE",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_144",
-        "text": "ATL",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_145",
-        "text": "Boost",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_146",
-        "text": "QT\/QML",
-        "type": "skill",
-        "position": 3
-      }, {
-        "id": "skill_147",
-        "text": "POCO",
-        "type": "skill",
-        "position": 4
-      }, {
-        "id": "skill_149",
-        "text": "Folly",
-        "type": "skill",
-        "position": 5
-      }]
-    }, {
-      "id": "97",
-      "parentId": "52",
-      "text": "Components",
-      "type": "category",
-      "children": [{
-        "id": "skill_148",
-        "text": "OLE\/COM",
-        "type": "skill",
-        "position": 0
-      }]
-    }]
-  }, {
-    "id": "34",
-    "parentId": "78",
-    "text": "Other Languages",
-    "type": "category",
-    "children": [{
-      "id": "skill_85",
-      "text": "Python",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_86",
-      "text": "Perl",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_87",
-      "text": "Bash",
-      "type": "skill",
-      "position": 2
-    }, {
-      "id": "skill_88",
-      "text": "Powershell",
-      "type": "skill",
-      "position": 3
-    }, {
-      "id": "skill_112",
-      "text": "F#",
-      "type": "skill",
-      "position": 5
-    }, {
-      "id": "skill_205",
-      "text": "Scala",
-      "type": "skill",
-      "position": 6
-    }, {
-      "id": "skill_204",
-      "text": "Go",
-      "type": "skill",
-      "position": 6
-    }, {
-      "id": "skill_203",
-      "text": "Kotlin",
-      "type": "skill",
-      "position": 6
-    }, {
-      "id": "skill_139",
-      "text": "Visual Basic for Applications",
-      "type": "skill",
-      "position": 6
-    }]
-  }, {
-    "id": "59",
-    "parentId": "78",
-    "text": "Multiplatform",
-    "type": "category",
-    "children": [{
-      "id": "skill_140",
-      "text": "POSIX",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_109",
-      "text": ".NET Core",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_110",
-      "text": "Mono for Xamarin",
-      "type": "skill",
-      "position": 2
-    }, {
-      "id": "skill_150",
-      "text": "Ionic",
-      "type": "skill",
-      "position": 3
-    }, {
-      "id": "skill_174",
-      "text": "NativeScript",
-      "type": "skill",
-      "position": 4
-    }, {
-      "id": "skill_151",
-      "text": "Universal Applications (Microsoft)",
-      "type": "skill",
-      "position": 4
-    }]
-  }]
-}, {
-  "id": "1",
-  "parentId": null,
-  "text": "Development",
-  "type": "category",
-  "children": [{
-    "id": "46",
-    "parentId": "1",
-    "text": "Patterns and Practices",
-    "type": "category",
-    "children": [{
-      "id": "47",
-      "parentId": "46",
-      "text": "Design Patterns",
-      "type": "category",
-      "children": [{
-        "id": "skill_118",
-        "text": "MVC",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_119",
-        "text": "MVVM",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_120",
-        "text": "Publisher-Subscriber",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_121",
-        "text": "CQRS",
-        "type": "skill",
-        "position": 3
-      }, {
-        "id": "skill_152",
-        "text": "Microservices",
-        "type": "skill",
-        "position": 4
-      }, {
-        "id": "skill_153",
-        "text": "Unit of Work",
-        "type": "skill",
-        "position": 5
-      }, {
-        "id": "skill_154",
-        "text": "Dependency Injection",
-        "type": "skill",
-        "position": 6
-      }]
-    }, {
-      "id": "51",
-      "parentId": "46",
-      "text": "Practices",
-      "type": "category",
-      "children": [{
-        "id": "skill_126",
-        "text": "Test-Driven Development",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_127",
-        "text": "Domain-Driven Development",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_128",
-        "text": "Code review",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_129",
-        "text": "Internationalization",
-        "type": "skill",
-        "position": 3
-      }, {
-        "id": "skill_138",
-        "text": "Branching and merging strategies",
-        "type": "skill",
-        "position": 4
-      }]
-    }]
-  }, {
-    "id": "17",
-    "parentId": "1",
-    "text": "API Definition",
-    "type": "category",
-    "children": [{
-      "id": "skill_33",
-      "text": "Basic REST competency",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_34",
-      "text": "Swagger",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_35",
-      "text": "Apiary",
-      "type": "skill",
-      "position": 2
-    }, {
-      "id": "skill_36",
-      "text": "Apigee",
-      "type": "skill",
-      "position": 3
-    }]
-  }, {
-    "id": "82",
-    "parentId": "1",
-    "text": "Message Brokers",
-    "type": "category",
-    "children": [{
-      "id": "skill_244",
-      "text": "Kafka",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_245",
-      "text": "RabbbitMQ",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_246",
-      "text": "ActiveMQ",
-      "type": "skill",
-      "position": 2
-    }]
-  }, {
-    "id": "84",
-    "parentId": "1",
-    "text": "Integration",
-    "type": "category",
-    "children": [{
-      "id": "skill_250",
-      "text": "ASTM",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_251",
-      "text": "POCT1-A",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_252",
-      "text": "HL7",
-      "type": "skill",
-      "position": 2
-    }, {
-      "id": "skill_253",
-      "text": "FHIR",
-      "type": "skill",
-      "position": 3
-    }]
-  }, {
-    "id": "80",
-    "parentId": "1",
-    "text": "Data Management",
-    "type": "category",
-    "children": [{
-      "id": "skill_11",
-      "text": "SQL",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_122",
-      "text": "SQLite Integration",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_184",
-      "text": "Elasticsearch",
-      "type": "skill",
-      "position": 2
-    }, {
-      "id": "skill_123",
-      "text": "MongoDB",
-      "type": "skill",
-      "position": 2
-    }, {
-      "id": "skill_182",
-      "text": "Redis",
-      "type": "skill",
-      "position": 3
-    }, {
-      "id": "skill_183",
-      "text": "Cassandra",
-      "type": "skill",
-      "position": 4
-    }]
-  }]
-}, {
-  "id": "61",
-  "parentId": null,
-  "text": "Deployment",
-  "type": "category",
-  "children": [{
-    "id": "79",
-    "parentId": "61",
-    "text": "Virtualization",
-    "type": "category",
-    "children": [{
-      "id": "81",
-      "parentId": "79",
-      "text": "Virtual Machines",
-      "type": "category",
-      "children": [{
-        "id": "skill_237",
-        "text": "VirtualBox Basic Knowledge",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_238",
-        "text": "VMware Basic Knowledge",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_242",
-        "text": "Microsoft Hyper-V Basic Knowledge",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_239",
-        "text": "VirtualBox Administration",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_240",
-        "text": "VMware Administration",
-        "type": "skill",
-        "position": 3
-      }, {
-        "id": "skill_243",
-        "text": "Microsoft Hyper-V Administration",
-        "type": "skill",
-        "position": 5
-      }]
-    }, {
-      "id": "14",
-      "parentId": "79",
-      "text": "Containers",
-      "type": "category",
-      "children": [{
-        "id": "skill_29",
-        "text": "Basic Docker Usage",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_30",
-        "text": "Docker image creation",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_31",
-        "text": "Docker Compose",
-        "type": "skill",
-        "position": 2
-      }]
-    }, {
-      "id": "62",
-      "parentId": "79",
-      "text": "Container Orchestration",
-      "type": "category",
-      "children": [{
-        "id": "skill_161",
-        "text": "Kubernetes",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_162",
-        "text": "Mesos",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_163",
-        "text": "Apache Marathon",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_164",
-        "text": "Openshift",
-        "type": "skill",
-        "position": 3
-      }, {
-        "id": "skill_32",
-        "text": "Docker Swarm",
-        "type": "skill",
-        "position": 4
-      }, {
-        "id": "skill_165",
-        "text": "Istio",
-        "type": "skill",
-        "position": 5
-      }]
-    }]
-  }, {
-    "id": "83",
-    "parentId": "61",
-    "text": "Message Borkers",
-    "type": "category",
-    "children": [{
-      "id": "skill_247",
-      "text": "Kafka Administration",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_248",
-      "text": "ActiveMQ Administration",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_249",
-      "text": "RabbitMQ Administration",
-      "type": "skill",
-      "position": 2
-    }]
-  }, {
-    "id": "8",
-    "parentId": "61",
-    "text": "Data Managent",
-    "type": "category",
-    "children": [{
-      "id": "12",
-      "parentId": "8",
-      "text": "SQL",
-      "type": "category",
-      "children": [{
-        "id": "skill_14",
-        "text": "SQL Server Administration",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_241",
-        "text": "SQL Server Backup &amp; Restore",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_12",
-        "text": "mySQL Administration",
-        "type": "skill",
-        "position": 3
-      }, {
-        "id": "skill_124",
-        "text": "PostgreSQL Administration",
-        "type": "skill",
-        "position": 4
-      }, {
-        "id": "skill_13",
-        "text": "Oracle Administration",
-        "type": "skill",
-        "position": 5
-      }, {
-        "id": "skill_28",
-        "text": "Oracle Backup &amp; Restore",
-        "type": "skill",
-        "position": 6
-      }]
-    }, {
-      "id": "49",
-      "parentId": "8",
-      "text": "NoSQL",
-      "type": "category",
-      "children": [{
-        "id": "skill_233",
-        "text": "MongoDB Administration",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_234",
-        "text": "Redis Administration",
-        "type": "skill",
-        "position": 3
-      }, {
-        "id": "skill_235",
-        "text": "Cassandra Administration",
-        "type": "skill",
-        "position": 5
-      }, {
-        "id": "skill_236",
-        "text": "Elasticsearch Administration",
-        "type": "skill",
-        "position": 7
-      }]
-    }]
-  }, {
-    "id": "71",
-    "parentId": "61",
-    "text": "Monitoring",
-    "type": "category",
-    "children": [{
-      "id": "skill_189",
-      "text": "Nagios",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_186",
-      "text": "Datadog",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_185",
-      "text": "ELK",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_187",
-      "text": "Grafana",
-      "type": "skill",
-      "position": 2
-    }, {
-      "id": "skill_188",
-      "text": "Prometheus",
-      "type": "skill",
-      "position": 3
-    }]
-  }, {
-    "id": "91",
-    "parentId": "61",
-    "text": "Integration tools",
-    "type": "category",
-    "children": [{
-      "id": "skill_254",
-      "text": "NextGen Connect Integration Engine (Mirth)",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_256",
-      "text": "Rhapsody",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_255",
-      "text": "InterSystems Ensemble",
-      "type": "skill",
-      "position": 1
-    }]
-  }, {
-    "id": "92",
-    "parentId": "61",
-    "text": "Operating Systems",
-    "type": "category",
-    "children": [{
-      "id": "skill_264",
-      "text": "Linux",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_265",
-      "text": "Windows",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_266",
-      "text": "Mac OS X",
-      "type": "skill",
-      "position": 2
-    }]
-  }]
-}, {
-  "id": "90",
-  "parentId": null,
-  "text": "Other",
-  "type": "category",
-  "children": [{
-    "id": "23",
-    "parentId": "90",
-    "text": "Machine Learning",
-    "type": "category",
-    "children": [{
-      "id": "skill_45",
-      "text": "Basic Machine Learning Knowledge",
-      "type": "skill",
-      "position": 0
-    }, {
-      "id": "skill_46",
-      "text": "TensorFlow",
-      "type": "skill",
-      "position": 1
-    }, {
-      "id": "skill_47",
-      "text": "Deeplearning4j",
-      "type": "skill",
-      "position": 2
-    }]
-  }, {
-    "id": "29",
-    "parentId": "90",
-    "text": "Cloud Computing",
-    "type": "category",
-    "children": [{
-      "id": "74",
-      "parentId": "29",
-      "text": "AWS",
-      "type": "category",
-      "children": [{
-        "id": "skill_192",
-        "text": "Amazon API Gateway",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_190",
-        "text": "Amazon Lambdas",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_191",
-        "text": "Amazon DynamoDB",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_193",
-        "text": "Amazon Cognito",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_194",
-        "text": "Amazon EKS",
-        "type": "skill",
-        "position": 4
-      }]
-    }, {
-      "id": "75",
-      "parentId": "29",
-      "text": "Azure",
-      "type": "category",
-      "children": [{
-        "id": "skill_198",
-        "text": "Azure API Management",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_196",
-        "text": "Azure Functions",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_197",
-        "text": "Azure Cosmos DB",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_195",
-        "text": "Azure Kubernetes Service",
-        "type": "skill",
-        "position": 3
-      }]
-    }, {
-      "id": "76",
-      "parentId": "29",
-      "text": "Google Cloud",
-      "type": "category",
-      "children": [{
-        "id": "skill_202",
-        "text": "Google Cloud Endpoints",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_199",
-        "text": "Google Cloud Serverless Functions",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_200",
-        "text": "Google Cloud Datastore",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_201",
-        "text": "Google Cloud Kubernetes Engine",
-        "type": "skill",
-        "position": 2
-      }]
-    }]
-  }, {
-    "id": "87",
-    "parentId": "90",
-    "text": "Analytics",
-    "type": "category",
-    "children": [{
-      "id": "73",
-      "parentId": "87",
-      "text": "Big Data",
-      "type": "category",
-      "children": [{
-        "id": "skill_219",
-        "text": "BigData Basic Knowledge",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_220",
-        "text": "Apache Spark",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_227",
-        "text": "R",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_226",
-        "text": "Apache Hadoop",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_221",
-        "text": "Apache Flink",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_229",
-        "text": "Predictive Analytics Basic Knowledge",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_222",
-        "text": "NiFi",
-        "type": "skill",
-        "position": 3
-      }, {
-        "id": "skill_223",
-        "text": "Apache Kafka",
-        "type": "skill",
-        "position": 4
-      }, {
-        "id": "skill_224",
-        "text": "Apache Samza",
-        "type": "skill",
-        "position": 5
-      }, {
-        "id": "skill_225",
-        "text": "Google Cloud Dataflow",
-        "type": "skill",
-        "position": 6
-      }, {
-        "id": "skill_228",
-        "text": "Blockchain",
-        "type": "skill",
-        "position": 8
-      }]
-    }, {
-      "id": "63",
-      "parentId": "87",
-      "text": "Business Intelligence",
-      "type": "category",
-      "children": [{
-        "id": "skill_207",
-        "text": "Business Intelligence Basic Knowledge",
-        "type": "skill",
-        "position": 0
-      }, {
-        "id": "skill_208",
-        "text": "QlikView Basic Knowledge",
-        "type": "skill",
-        "position": 1
-      }, {
-        "id": "skill_209",
-        "text": "QlikView Administration",
-        "type": "skill",
-        "position": 2
-      }, {
-        "id": "skill_210",
-        "text": "Qlik Sense Basic Knowledge",
-        "type": "skill",
-        "position": 3
-      }, {
-        "id": "skill_211",
-        "text": "Qlik Sense Administration",
-        "type": "skill",
-        "position": 4
-      }, {
-        "id": "skill_212",
-        "text": "Tableau Basic Knowledge",
-        "type": "skill",
-        "position": 5
-      }, {
-        "id": "skill_213",
-        "text": "Tableau Administration",
-        "type": "skill",
-        "position": 6
-      }, {
-        "id": "skill_214",
-        "text": "Microsoft Power BI Basic Knowledge",
-        "type": "skill",
-        "position": 7
-      }, {
-        "id": "skill_215",
-        "text": "Microsoft Power BI Administration",
-        "type": "skill",
-        "position": 8
-      }]
-    }]
-  }]
-}]
-
+    "children": [
+      {
+        "id": "34",
+        "parentId": "90",
+        "text": "Languages",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_85",
+            "text": "Python",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_86",
+            "text": "Perl",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_87",
+            "text": "Bash",
+            "type": "skill",
+            "position": 2
+          },
+          {
+            "id": "skill_88",
+            "text": "Powershell",
+            "type": "skill",
+            "position": 3
+          },
+          {
+            "id": "skill_112",
+            "text": "F#",
+            "type": "skill",
+            "position": 5
+          },
+          {
+            "id": "skill_205",
+            "text": "Scala",
+            "type": "skill",
+            "position": 6
+          },
+          {
+            "id": "skill_204",
+            "text": "Go",
+            "type": "skill",
+            "position": 6
+          },
+          {
+            "id": "skill_203",
+            "text": "Kotlin",
+            "type": "skill",
+            "position": 6
+          },
+          {
+            "id": "skill_139",
+            "text": "Visual Basic for Applications",
+            "type": "skill",
+            "position": 6
+          },
+          {
+            "id": "skill_399",
+            "text": "Ruby",
+            "type": "skill",
+            "position": 7
+          },
+          {
+            "id": "skill_401",
+            "text": "Gherkin",
+            "type": "skill",
+            "position": 8
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "parentId": "90",
+        "text": "Machine Learning",
+        "type": "category",
+        "children": [
+          {
+            "id": "skill_45",
+            "text": "Basic Machine Learning Knowledge",
+            "type": "skill",
+            "position": 0
+          },
+          {
+            "id": "skill_46",
+            "text": "TensorFlow",
+            "type": "skill",
+            "position": 1
+          },
+          {
+            "id": "skill_47",
+            "text": "Deeplearning4j",
+            "type": "skill",
+            "position": 2
+          }
+        ]
+      },
+      {
+        "id": "29",
+        "parentId": "90",
+        "text": "Cloud Computing",
+        "type": "category",
+        "children": [
+          {
+            "id": "74",
+            "parentId": "29",
+            "text": "AWS",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_192",
+                "text": "Amazon API Gateway",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_190",
+                "text": "Amazon Lambdas",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_191",
+                "text": "Amazon DynamoDB",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_193",
+                "text": "Amazon Cognito",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_194",
+                "text": "Amazon EKS",
+                "type": "skill",
+                "position": 4
+              }
+            ]
+          },
+          {
+            "id": "75",
+            "parentId": "29",
+            "text": "Azure",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_198",
+                "text": "Azure API Management",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_196",
+                "text": "Azure Functions",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_197",
+                "text": "Azure Cosmos DB",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_195",
+                "text": "Azure Kubernetes Service",
+                "type": "skill",
+                "position": 3
+              }
+            ]
+          },
+          {
+            "id": "76",
+            "parentId": "29",
+            "text": "Google Cloud",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_202",
+                "text": "Google Cloud Endpoints",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_199",
+                "text": "Google Cloud Serverless Functions",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_200",
+                "text": "Google Cloud Datastore",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_201",
+                "text": "Google Cloud Kubernetes Engine",
+                "type": "skill",
+                "position": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "87",
+        "parentId": "90",
+        "text": "Analytics",
+        "type": "category",
+        "children": [
+          {
+            "id": "73",
+            "parentId": "87",
+            "text": "Big Data",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_219",
+                "text": "BigData Basic Knowledge",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_220",
+                "text": "Apache Spark",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_227",
+                "text": "R",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_226",
+                "text": "Apache Hadoop",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_221",
+                "text": "Apache Flink",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_229",
+                "text": "Predictive Analytics Basic Knowledge",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_222",
+                "text": "NiFi",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_223",
+                "text": "Apache Kafka",
+                "type": "skill",
+                "position": 4
+              },
+              {
+                "id": "skill_224",
+                "text": "Apache Samza",
+                "type": "skill",
+                "position": 5
+              },
+              {
+                "id": "skill_225",
+                "text": "Google Cloud Dataflow",
+                "type": "skill",
+                "position": 6
+              },
+              {
+                "id": "skill_228",
+                "text": "Blockchain",
+                "type": "skill",
+                "position": 8
+              }
+            ]
+          },
+          {
+            "id": "63",
+            "parentId": "87",
+            "text": "Business Intelligence",
+            "type": "category",
+            "children": [
+              {
+                "id": "skill_207",
+                "text": "Business Intelligence Basic Knowledge",
+                "type": "skill",
+                "position": 0
+              },
+              {
+                "id": "skill_208",
+                "text": "QlikView Basic Knowledge",
+                "type": "skill",
+                "position": 1
+              },
+              {
+                "id": "skill_209",
+                "text": "QlikView Administration",
+                "type": "skill",
+                "position": 2
+              },
+              {
+                "id": "skill_210",
+                "text": "Qlik Sense Basic Knowledge",
+                "type": "skill",
+                "position": 3
+              },
+              {
+                "id": "skill_211",
+                "text": "Qlik Sense Administration",
+                "type": "skill",
+                "position": 4
+              },
+              {
+                "id": "skill_212",
+                "text": "Tableau Basic Knowledge",
+                "type": "skill",
+                "position": 5
+              },
+              {
+                "id": "skill_213",
+                "text": "Tableau Administration",
+                "type": "skill",
+                "position": 6
+              },
+              {
+                "id": "skill_214",
+                "text": "Microsoft Power BI Basic Knowledge",
+                "type": "skill",
+                "position": 7
+              },
+              {
+                "id": "skill_215",
+                "text": "Microsoft Power BI Administration",
+                "type": "skill",
+                "position": 8
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
