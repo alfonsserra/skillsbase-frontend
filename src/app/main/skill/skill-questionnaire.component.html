@@ -1,6 +1,6 @@
 <p class="level-{{level}} padding-{{level}}" [class.partial]="!skill.isProficiencyAssessed || !skill.isInterestAssessed" (click)="toggleCollapsed()">
     <i class="fa mr-2" [class.fa-plus-square-o]="collapsed"  [class.fa-minus-square-o]="!collapsed"></i>{{skill.text}}</p>
-
+<p markdown>{{skill.comments}}</p>
 <ng-container *ngIf="!collapsed">
     <div class="row">
         <label class="col-md-4 mt-2 col-form-label">&nbsp;</label>

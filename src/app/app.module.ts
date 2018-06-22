@@ -33,6 +33,8 @@ import { UsersTableComponent } from './shared/components/users-table/users-table
 import { SubSideBarComponent } from './shared/components/sidebar/subsidebar.component';
 import { MySummaryComponent } from './main/mysummary/my-summary.component';
 import { SkillsToImproveComponent } from './shared/components/skills-to-improve-table/skills-to-improve-table.component';
+import { MarkdownModule } from 'ngx-markdown';
+
 
 @NgModule({
 	imports:         [
@@ -45,6 +47,7 @@ import { SkillsToImproveComponent } from './shared/components/skills-to-improve-
 		SystelabChartsModule.forRoot(),
 		SystelabLoginModule.forRoot(),
 		DndModule.forRoot(),
+    MarkdownModule.forRoot(),
 		AgGridModule.withComponents([
 			GridContextMenuComponent,
 			GridHeaderContextMenuComponent

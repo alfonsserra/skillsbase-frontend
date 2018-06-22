@@ -29,7 +29,8 @@
     "systelab-translate": "^4.2.0",
     "systelab-login": "^4.0.0",
     "systelab-charts": "^2.1.0",
-    "systelab-preferences": "^3.0.0"
+    "systelab-preferences": "^3.0.0",
+    "ngx-markdown": "^6.1.0"
   },
   "devDependencies": {
     "@angular/cli": "^6.0.1",
