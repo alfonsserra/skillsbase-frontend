@@ -20,6 +20,10 @@ export interface Skill {
    */
   id?: number;
 
+  useInStatistics?: boolean;
+
+  companyInterest?: number;
+
   level?: number;
 
   position?: number;
