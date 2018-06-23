@@ -1,5 +1,5 @@
 import { Inject, Injectable, Optional } from '@angular/core';
-import { HttpClient, HttpParams, HttpResponseBase } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpResponse, HttpResponseBase } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../model/user';
 import { BASE_PATH } from '../variables';
@@ -22,7 +22,7 @@ export class UserService extends BaseService {
    * @param login
    * @param password
    */
-  public authenticateUser(login?: string, password?: string): Observable<HttpResponseBase> {
+  public authenticateUser(login?: string, password?: string): Observable<HttpResponse<any>> {
 
     const headers = this.defaultHeaders.append('Content-Type', 'application/x-www-form-urlencoded');
     const body = new HttpParams().set('login', login)

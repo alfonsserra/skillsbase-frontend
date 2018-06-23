@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ChangePasswordDialog, ChangePasswordDialogParameters } from 'systelab-login/widgets/change-password-dialog.component';
 import { Observable, of as observableOf } from 'rxjs';
 import { MessagePopupService } from 'systelab-components/widgets/modal/message-popup/message-popup.service';
@@ -6,19 +6,25 @@ import { DialogService } from 'systelab-components/widgets/modal/dialog/dialog.s
 
 import { I18nService } from 'systelab-translate/lib/i18n.service';
 import { UserService } from '../../api/user.service';
+import { ApiGlobalsService } from '../../../globals/globals.service';
 
 @Component({
   selector:    'header',
   templateUrl: 'header.component.html',
   styleUrls:   ['header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
   @Output() public clickMenu = new EventEmitter();
+  public userFullName;
 
   constructor(protected messagePopupService: MessagePopupService,
               protected dialogService: DialogService, protected i18nService: I18nService,
-              protected userService: UserService) {
+              protected userService: UserService, protected apiGlobalsService: ApiGlobalsService) {
+  }
+
+  public ngOnInit() {
+    this.userFullName = this.apiGlobalsService.userFullName;
   }
 
   public doChangePassword() {
@@ -49,6 +55,7 @@ export class HeaderComponent {
   }
 
   public doLogout() {
+    this.apiGlobalsService.userFullName = '';
     window.location.reload();
   }
 

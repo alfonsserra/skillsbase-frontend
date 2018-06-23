@@ -17,8 +17,6 @@ export class TopUsersComponent implements OnInit {
 
   @Input() public skill: Skill;
 
-  public data: UserRateSummary;
-
   public skillsList = [];
 
   constructor(protected summaryService: SummaryService) {
@@ -39,7 +37,7 @@ export class TopUsersComponent implements OnInit {
       this.summaryService.getUserRateSummary(this.skill.id)
         .subscribe(userRateSummary =>
           this.skillsList.unshift(new SubSkill(this.skill, userRateSummary)));
-      for (let skill of this.skill.children) {
+      for (const skill of this.skill.children) {
         this.summaryService.getUserRateSummary(skill.id)
           .subscribe(userRateSummary => {
             if (userRateSummary.topTenByProficiency.length > 0 || userRateSummary.topTenByInterest.length > 0) {
