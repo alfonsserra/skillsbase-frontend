@@ -35,7 +35,6 @@ import { MySummaryComponent } from './main/mysummary/my-summary.component';
 import { SkillsToImproveComponent } from './shared/components/skills-to-improve-table/skills-to-improve-table.component';
 import { MarkdownModule } from 'ngx-markdown';
 
-
 @NgModule({
 	imports:         [
 		BrowserModule,
@@ -47,7 +46,7 @@ import { MarkdownModule } from 'ngx-markdown';
 		SystelabChartsModule.forRoot(),
 		SystelabLoginModule.forRoot(),
 		DndModule.forRoot(),
-    MarkdownModule.forRoot(),
+		MarkdownModule.forRoot(),
 		AgGridModule.withComponents([
 			GridContextMenuComponent,
 			GridHeaderContextMenuComponent
@@ -56,29 +55,28 @@ import { MarkdownModule } from 'ngx-markdown';
 	],
 	declarations:    [
 		AppComponent,
-    HeaderComponent,
+		HeaderComponent,
 		MainComponent,
 		PageNotFoundComponent,
 		LoginComponent,
-    SkillQuestionnaireComponent,
-    SummaryComponent,
-    CompareComponent,
-    SideBarComponent,
-    SubSideBarComponent,
-    SkillsTableComponent,
-    TopUsersComponent,
-    UsersTableComponent,
-    MySummaryComponent,
-    SkillsToImproveComponent
+		SkillQuestionnaireComponent,
+		SummaryComponent,
+		CompareComponent,
+		SideBarComponent,
+		SubSideBarComponent,
+		SkillsTableComponent,
+		TopUsersComponent,
+		UsersTableComponent,
+		MySummaryComponent,
+		SkillsToImproveComponent
 	],
 	providers:       [
 		{provide: BASE_PATH, useValue: environment.API_BASE_PATH},
 		{provide: HTTP_INTERCEPTORS, useClass: EmptyBodyInterceptor, multi: true},
-    MessagePopupService,
+		MessagePopupService,
 		DialogService
 	],
-	entryComponents: [
-	],
+	entryComponents: [],
 	bootstrap:       [AppComponent]
 })
 export class AppModule {
