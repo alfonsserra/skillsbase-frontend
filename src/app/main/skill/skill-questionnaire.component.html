@@ -1,7 +1,19 @@
-<div class="button-container">
-    <button *ngIf="level===1" (click)="setFullCategoryToZero()" id="myBtn" title="Go to top">
-        Set all to 0
-    </button>
+<div *ngIf="level===1" class="button-container">
+
+    <div class="navbar-collapse collapse" id="myBtn">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                    Utilities
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" (click)="setFullCategoryToZero()">Set proficiency and interest to 0</a>
+                    <a class="dropdown-item" (click)="copyProficiencyToInterest()">Copy proficiency to interest</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
 </div>
 <p class="level-{{level}} padding-{{level}}" [class.partial]="!skill.isProficiencyAssessed || !skill.isInterestAssessed" (click)="toggleCollapsed()">
     <i *ngIf="level!==1" class="fa mr-2" [class.fa-plus-square-o]="collapsed" [class.fa-minus-square-o]="!collapsed"></i>{{skill.text}}</p>

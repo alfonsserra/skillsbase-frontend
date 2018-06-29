@@ -1,4 +1,4 @@
-import { Component, HostListener, Inject, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Skill } from '../../shared/model/skill';
 import { AssessmentService } from '../../shared/api/assessment.service';
 import { SkillAssessment } from '../../shared/model/skill-assessment';
@@ -20,7 +20,9 @@ export class SkillQuestionnaireComponent {
 	}
 
 	public toggleCollapsed() {
-		this.collapsed = !this.collapsed;
+		if (this.level !== 1) {
+			this.collapsed = !this.collapsed;
+		}
 	}
 
 	public changeProficiencySlider(s: Skill) {
@@ -58,7 +60,10 @@ export class SkillQuestionnaireComponent {
 	}
 
 	public setFullCategoryToZero() {
-		this.skillsTreeService.setProficiencyAndInterestToZero(this.skill)
+		this.skillsTreeService.setProficiencyAndInterestToZero(this.skill);
 	}
 
+	public copyProficiencyToInterest() {
+		this.skillsTreeService.setInterestEqualsToProficiency(this.skill);
+	}
 }

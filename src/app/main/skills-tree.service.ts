@@ -26,47 +26,77 @@ export class SkillsTreeService {
 		startingSkill.interest = 0;
 
 		if (startingSkill.children) {
-			for (let i = 0; i < startingSkill.children.length; i++) {
-				this.initSkill(startingSkill.children[i]);
-			}
+			startingSkill.children.forEach((skill) => this.initSkill(skill));
 		}
 	}
 
 	public setProficiencyAndInterestToZero(startingSkill: Skill) {
 
-		const assessments = this.getSkillAssessmentListFromRoot(startingSkill);
-		this.assessmentService.saveUserAssessment(assessments)
-			.subscribe(
-				(savedAssessments) => {
-					for (let i = 0; i < savedAssessments.length; i++) {
-						this.setSkill(startingSkill, savedAssessments[i].id.skillId, savedAssessments[i].proficiency, savedAssessments[i].interest, true);
-					}
+		const assessments = this.getSkillAssessmentListFromRoot(startingSkill, (s: Skill) => !s.isProficiencyAssessed || !s.isProficiencyAssessed);
+		if (assessments.length > 0) {
+			assessments.forEach(assessment => {
+				if (assessment.interest === undefined) {
+					assessment.interest = 0;
 				}
-			);
+				if (assessment.proficiency === undefined) {
+					assessment.proficiency = 0;
+				}
+			});
+
+			this.assessmentService.saveUserAssessment(assessments)
+				.subscribe(
+					(savedAssessments) => {
+						for (let i = 0; i < savedAssessments.length; i++) {
+							this.setSkill(startingSkill, savedAssessments[i].id.skillId, savedAssessments[i].proficiency, savedAssessments[i].interest, true);
+						}
+					}
+				);
+		}
 	}
 
-	public getSkillAssessmentListFromRoot(startingSkill: Skill): Array<SkillAssessment> {
+	public setInterestEqualsToProficiency(startingSkill: Skill) {
+
+		const assessments = this.getSkillAssessmentListFromRoot(startingSkill, (s: Skill) => s.isProficiencyAssessed && s.proficiency !== s.interest);
+		if (assessments.length > 0) {
+
+			assessments.forEach(assessment => assessment.interest = assessment.proficiency);
+			this.assessmentService.saveUserAssessment(assessments)
+				.subscribe(
+					(savedAssessments) => {
+						for (let i = 0; i < savedAssessments.length; i++) {
+							this.setSkill(startingSkill, savedAssessments[i].id.skillId, savedAssessments[i].proficiency, savedAssessments[i].interest, true);
+						}
+					}
+				);
+		}
+	}
+
+	public getSkillAssessmentListFromRoot(startingSkill: Skill, filter: (s: Skill) => boolean): Array<SkillAssessment> {
 		let skills = new Array<SkillAssessment>();
-		let proficiency = 0;
-		let interest = 0;
-		if (startingSkill.proficiency) {
+
+		let proficiency: number;
+		let interest: number;
+
+		if (startingSkill.isProficiencyAssessed) {
 			proficiency = startingSkill.proficiency;
 		}
-		if (startingSkill.interest) {
+		if (startingSkill.isInterestAssessed) {
 			interest = startingSkill.interest;
 		}
-		skills.push({
-			id:          {
-				skillId: startingSkill.id,
-				userId:  0
-			},
-			proficiency: proficiency,
-			interest:    interest
-		});
+		if (filter(startingSkill)) {
 
+			skills.push({
+				id:          {
+					skillId: startingSkill.id,
+					userId:  0
+				},
+				proficiency: proficiency,
+				interest:    interest
+			});
+		}
 		if (startingSkill.children) {
 			for (let i = 0; i < startingSkill.children.length; i++) {
-				skills = skills.concat(this.getSkillAssessmentListFromRoot(startingSkill.children[i]));
+				skills = skills.concat(this.getSkillAssessmentListFromRoot(startingSkill.children[i], filter));
 			}
 		}
 		return skills;
