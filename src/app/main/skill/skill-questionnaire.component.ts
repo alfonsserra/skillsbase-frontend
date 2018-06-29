@@ -1,7 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostListener, Inject, Input } from '@angular/core';
 import { Skill } from '../../shared/model/skill';
 import { AssessmentService } from '../../shared/api/assessment.service';
 import { SkillAssessment } from '../../shared/model/skill-assessment';
+import { SkillsTreeService } from '../skills-tree.service';
 
 @Component({
 	selector:    'skill-questionnaire',
@@ -14,7 +15,7 @@ export class SkillQuestionnaireComponent {
 	@Input() public level = 1;
 	public collapsed = false;
 
-	constructor(protected assessmentService: AssessmentService) {
+	constructor(protected assessmentService: AssessmentService, protected skillsTreeService: SkillsTreeService) {
 
 	}
 
@@ -55,4 +56,9 @@ export class SkillQuestionnaireComponent {
 					s.isInterestAssessed = true;
 				});
 	}
+
+	public setFullCategoryToZero() {
+		this.skillsTreeService.setProficiencyAndInterestToZero(this.skill)
+	}
+
 }

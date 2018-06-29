@@ -32,6 +32,46 @@ export class SkillsTreeService {
 		}
 	}
 
+	public setProficiencyAndInterestToZero(startingSkill: Skill) {
+
+		const assessments = this.getSkillAssessmentListFromRoot(startingSkill);
+		this.assessmentService.saveUserAssessment(assessments)
+			.subscribe(
+				(savedAssessments) => {
+					for (let i = 0; i < savedAssessments.length; i++) {
+						this.setSkill(startingSkill, savedAssessments[i].id.skillId, savedAssessments[i].proficiency, savedAssessments[i].interest, true);
+					}
+				}
+			);
+	}
+
+	public getSkillAssessmentListFromRoot(startingSkill: Skill): Array<SkillAssessment> {
+		let skills = new Array<SkillAssessment>();
+		let proficiency = 0;
+		let interest = 0;
+		if (startingSkill.proficiency) {
+			proficiency = startingSkill.proficiency;
+		}
+		if (startingSkill.interest) {
+			interest = startingSkill.interest;
+		}
+		skills.push({
+			id:          {
+				skillId: startingSkill.id,
+				userId:  0
+			},
+			proficiency: proficiency,
+			interest:    interest
+		});
+
+		if (startingSkill.children) {
+			for (let i = 0; i < startingSkill.children.length; i++) {
+				skills = skills.concat(this.getSkillAssessmentListFromRoot(startingSkill.children[i]));
+			}
+		}
+		return skills;
+	}
+
 	public getNumberOfSkills(startingSkill: Skill, onlyAssessed = false): number {
 
 		let total = 1;
@@ -53,11 +93,11 @@ export class SkillsTreeService {
 	private setSkill(startingSkill: Skill, id: number, proficiency: number, interest: number, individual: boolean): boolean {
 		if (startingSkill.id === id) {
 			if (individual) {
-				if (proficiency) {
+				if (proficiency !== undefined) {
 					startingSkill.proficiency = proficiency;
 					startingSkill.isProficiencyAssessed = true;
 				}
-				if (interest) {
+				if (interest !== undefined) {
 					startingSkill.interest = interest;
 					startingSkill.isInterestAssessed = true;
 				}

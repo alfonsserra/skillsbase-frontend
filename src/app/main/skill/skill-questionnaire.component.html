@@ -1,5 +1,10 @@
+<div class="button-container">
+    <button *ngIf="level===1" (click)="setFullCategoryToZero()" id="myBtn" title="Go to top">
+        Set all to 0
+    </button>
+</div>
 <p class="level-{{level}} padding-{{level}}" [class.partial]="!skill.isProficiencyAssessed || !skill.isInterestAssessed" (click)="toggleCollapsed()">
-    <i class="fa mr-2" [class.fa-plus-square-o]="collapsed"  [class.fa-minus-square-o]="!collapsed"></i>{{skill.text}}</p>
+    <i *ngIf="level!==1" class="fa mr-2" [class.fa-plus-square-o]="collapsed" [class.fa-minus-square-o]="!collapsed"></i>{{skill.text}}</p>
 <p markdown>{{skill.comments}}</p>
 <ng-container *ngIf="!collapsed">
     <div class="row" [class.mb-4]="level>1">
