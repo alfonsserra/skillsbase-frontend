@@ -124,17 +124,15 @@
   font-size: 15px;
   border: none;
   outline: none;
-  background-color: #FFC107;
-  color: black;
+  background-color: rgb(21, 143, 239);
+  color: white;
   cursor: pointer;
-  -webkit-box-shadow: 0 6px 10px 0 rgba(0,0,0,0.3);
-  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.3);
-  height: 40px;
-  width: 120px;
+  height: 38px;
+  width: 100px;
   transition: 0.2s;
   text-align: center;
 }
 #myBtn:hover {
-  background-color: #FF5722;
+  background-color: rgb(21, 109, 201);
 }
 
