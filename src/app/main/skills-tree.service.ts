@@ -32,23 +32,25 @@ export class SkillsTreeService {
 
 	public setProficiencyAndInterestToZero(startingSkill: Skill) {
 
-		const assessments = this.getSkillAssessmentListFromRoot(startingSkill, (s: Skill) => !s.isProficiencyAssessed || !s.isProficiencyAssessed);
-		if (assessments.length > 0) {
-			assessments.forEach(assessment => {
-				if (assessment.interest === undefined) {
-					assessment.interest = 0;
-				}
-				if (assessment.proficiency === undefined) {
-					assessment.proficiency = 0;
-				}
+		const assessments: Array<SkillAssessment> = this.getSkillAsListFromRoot(startingSkill)
+			.filter((s: Skill) => !s.isProficiencyAssessed || !s.isProficiencyAssessed)
+			.map((s: Skill) => {
+				return {
+					id:          {
+						skillId: s.id,
+						userId:  0
+					},
+					proficiency: s.proficiency ? s.proficiency : 0,
+					interest:    s.interest ? s.interest : 0
+				};
 			});
+
+		if (assessments.length > 0) {
 
 			this.assessmentService.saveUserAssessment(assessments)
 				.subscribe(
 					(savedAssessments) => {
-						for (let i = 0; i < savedAssessments.length; i++) {
-							this.setSkill(startingSkill, savedAssessments[i].id.skillId, savedAssessments[i].proficiency, savedAssessments[i].interest, true);
-						}
+						this.setSkillAssessments(startingSkill, savedAssessments);
 					}
 				);
 		}
@@ -56,48 +58,35 @@ export class SkillsTreeService {
 
 	public setInterestEqualsToProficiency(startingSkill: Skill) {
 
-		const assessments = this.getSkillAssessmentListFromRoot(startingSkill, (s: Skill) => s.isProficiencyAssessed && s.proficiency !== s.interest);
-		if (assessments.length > 0) {
+		const assessments: Array<SkillAssessment> = this.getSkillAsListFromRoot(startingSkill)
+			.filter((s: Skill) => s.isProficiencyAssessed && s.proficiency !== s.interest)
+			.map((s: Skill) => {
+				return {
+					id:          {
+						skillId: s.id,
+						userId:  0
+					},
+					proficiency: s.proficiency,
+					interest:    s.proficiency
+				};
+			});
 
-			assessments.forEach(assessment => assessment.interest = assessment.proficiency);
+		if (assessments.length > 0) {
 			this.assessmentService.saveUserAssessment(assessments)
 				.subscribe(
 					(savedAssessments) => {
-						for (let i = 0; i < savedAssessments.length; i++) {
-							this.setSkill(startingSkill, savedAssessments[i].id.skillId, savedAssessments[i].proficiency, savedAssessments[i].interest, true);
-						}
+						this.setSkillAssessments(startingSkill, savedAssessments);
 					}
 				);
 		}
 	}
 
-	public getSkillAssessmentListFromRoot(startingSkill: Skill, filter: (s: Skill) => boolean): Array<SkillAssessment> {
-		let skills = new Array<SkillAssessment>();
+	public getSkillAsListFromRoot(startingSkill: Skill): Array<Skill> {
+		let skills = new Array<Skill>();
 
-		let proficiency: number;
-		let interest: number;
-
-		if (startingSkill.isProficiencyAssessed) {
-			proficiency = startingSkill.proficiency;
-		}
-		if (startingSkill.isInterestAssessed) {
-			interest = startingSkill.interest;
-		}
-		if (filter(startingSkill)) {
-
-			skills.push({
-				id:          {
-					skillId: startingSkill.id,
-					userId:  0
-				},
-				proficiency: proficiency,
-				interest:    interest
-			});
-		}
+		skills.push(startingSkill);
 		if (startingSkill.children) {
-			for (let i = 0; i < startingSkill.children.length; i++) {
-				skills = skills.concat(this.getSkillAssessmentListFromRoot(startingSkill.children[i], filter));
-			}
+			startingSkill.children.forEach((skill) => skills = skills.concat(this.getSkillAsListFromRoot(skill)));
 		}
 		return skills;
 	}
@@ -106,11 +95,7 @@ export class SkillsTreeService {
 
 		let total = 1;
 		if (onlyAssessed) {
-			if (startingSkill.isProficiencyAssessed && startingSkill.isInterestAssessed) {
-				total = 1;
-			} else {
-				total = 0;
-			}
+			total = startingSkill.isProficiencyAssessed && startingSkill.isInterestAssessed ? 1 : 0;
 		}
 		if (startingSkill.children) {
 			for (let i = 0; i < startingSkill.children.length; i++) {
@@ -118,6 +103,11 @@ export class SkillsTreeService {
 			}
 		}
 		return total;
+	}
+
+	private setSkillAssessments(startingSkill: Skill, assessments: Array<SkillAssessment>) {
+		assessments.forEach((assessment: SkillAssessment) => this.setSkill(startingSkill, assessment.id.skillId, assessment.proficiency, assessment.interest, true));
+
 	}
 
 	private setSkill(startingSkill: Skill, id: number, proficiency: number, interest: number, individual: boolean): boolean {
