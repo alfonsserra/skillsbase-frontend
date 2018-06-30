@@ -2,11 +2,11 @@
     <div class="row mt-1 w-100 slab-flex-1">
         <div class="col-md-6 p-2">
             <h5 class="text-center"><i class="fa fa-thumbs-o-up"></i> Proficiency</h5>
-            <systelab-chart #chart1 [maintainAspectRatio]="false" [labels]="labels" [data]="dataBar1" [legend]="legend" [typeChart]="'radar'" [isBackgroundGrid]="false" [minValueForRadar]="0" [maxValueForRadar]="5"></systelab-chart>
+            <systelab-chart #proficiencyChart [maintainAspectRatio]="false" [labels]="labels" [data]="dataBarProficiency" [legend]="legend" [typeChart]="'radar'" [isBackgroundGrid]="false" [minValueForRadar]="0" [maxValueForRadar]="5"></systelab-chart>
         </div>
         <div class="col-md-6 p-2">
             <h5 class="text-center"><i class="fa fa-heart-o"></i> Interest</h5>
-            <systelab-chart #chart2 [maintainAspectRatio]="false" [labels]="labels" [data]="dataBar2" [legend]="legend" [typeChart]="'radar'" [isBackgroundGrid]="false" [minValueForRadar]="0" [maxValueForRadar]="5"></systelab-chart>
+            <systelab-chart #interestChart [maintainAspectRatio]="false" [labels]="labels" [data]="dataBarInterest" [legend]="legend" [typeChart]="'radar'" [isBackgroundGrid]="false" [minValueForRadar]="0" [maxValueForRadar]="5"></systelab-chart>
         </div>
     </div>
 </div>

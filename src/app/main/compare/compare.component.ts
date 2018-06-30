@@ -7,28 +7,25 @@ import { timer } from 'rxjs';
 	selector:    'compare',
 	templateUrl: 'compare.component.html'
 })
-export class CompareComponent implements OnInit {
+export class CompareComponent {
 
-	public dataBar1: Array<ChartItem> = [];
-	public dataBar2: Array<ChartItem> = [];
+	public dataBarProficiency: Array<ChartItem> = [];
+	public dataBarInterest: Array<ChartItem> = [];
 	public legend: boolean;
 	public labels: Array<string> = [];
 
-	@ViewChild('chart1') chart1: ChartComponent;
-	@ViewChild('chart2') chart2: ChartComponent;
+	@ViewChild('proficiencyChart') proficiencyChart: ChartComponent;
+	@ViewChild('interestChart') interestChart: ChartComponent;
 
 	constructor() {
 		this.legend = true;
 	}
 
-	public ngOnInit() {
-	}
-
 	private initChart(skill: Skill) {
 
 		this.labels = [];
-		this.dataBar1 = [];
-		this.dataBar2 = [];
+		this.dataBarProficiency = [];
+		this.dataBarInterest = [];
 
 		if (skill.children) {
 			this.fillLabels(skill);
@@ -39,41 +36,30 @@ export class CompareComponent implements OnInit {
 		timer(200)
 			.subscribe(
 				() => {
-
-					this.chart1.doUpdate();
-					this.chart2.doUpdate();
+					this.proficiencyChart.doUpdate();
+					this.interestChart.doUpdate();
 				}
 			);
 	}
 
-	public fillLabels(skill: Skill) {
-		for (let i = 0; i < skill.children.length; i++) {
-			this.labels.push(skill.children[i].text);
-		}
+	private fillLabels(skill: Skill) {
+		this.labels = skill.children.map((s: Skill) => s.text);
 	}
 
-	public fillProficiency(skill: Skill) {
-		let me = [];
-		let organization = [];
+	private fillProficiency(skill: Skill) {
+		const myProficiency = skill.children.map((s: Skill) => s.proficiency);
+		const organizationProficiency = skill.children.map((s: Skill) => s.averageProficiency);
 
-		for (let i = 0; i < skill.children.length; i++) {
-			me.push(skill.children[i].proficiency);
-			organization.push(skill.children[i].averageProficiency);
-		}
-		this.dataBar1.push(new ChartItem('Me', me, '', '', false, true, false, 3));
-		this.dataBar1.push(new ChartItem('Organization', organization, '', '', true, true, false, 3));
+		this.dataBarProficiency.push(new ChartItem('Me', myProficiency, '', '', false, true, false, 3));
+		this.dataBarProficiency.push(new ChartItem('Organization', organizationProficiency, '', '', true, true, false, 3));
 	}
 
-	public fillInterest(skill: Skill) {
-		let me = [];
-		let organization = [];
+	private fillInterest(skill: Skill) {
+		const myInterest = skill.children.map((s: Skill) => s.interest);
+		const organizationInterest = skill.children.map((s: Skill) => s.averageInterest);
 
-		for (let i = 0; i < skill.children.length; i++) {
-			me.push(skill.children[i].interest);
-			organization.push(skill.children[i].averageInterest);
-		}
-		this.dataBar2.push(new ChartItem('Me', me, '', '', false, true, false, 3));
-		this.dataBar2.push(new ChartItem('Organization', organization, '', '', true, true, false, 3));
+		this.dataBarInterest.push(new ChartItem('Me', myInterest, '', '', false, true, false, 3));
+		this.dataBarInterest.push(new ChartItem('Organization', organizationInterest, '', '', true, true, false, 3));
 	}
 
 	public doUpdate(skill: Skill) {
