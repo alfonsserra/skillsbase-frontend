@@ -42,11 +42,11 @@ export class MainComponent implements OnInit {
 	}
 
 	public ngOnInit() {
-		this.itemsNav.push(new NavbarItem(0, 'Assessment', '', false, true, true, () => this.selectNav(0)));
-		this.itemsNav.push(new NavbarItem(1, 'Results', '', false, false, true, () => this.selectNav(1)));
-		this.itemsNav.push(new NavbarItem(2, 'Organization', '', false, false, true, () => this.selectNav(2)));
-		this.itemsNav.push(new NavbarItem(3, 'People', '', false, false, true, () => this.selectNav(3)));
-		this.itemsNav.push(new NavbarItem(4, 'Map', '', false, false, true, () => this.selectNav(4)));
+		this.itemsNav.push(new NavbarItem(0, 'Assessment', 'slab-icon-medium fa fa-exchange nav-icon', false, true, true, () => this.selectNav(0)));
+		this.itemsNav.push(new NavbarItem(1, 'Results', 'slab-icon-medium fa fa-graduation-cap nav-icon', false, false, true, () => this.selectNav(1)));
+		this.itemsNav.push(new NavbarItem(2, 'Organization', 'slab-icon-medium icon-home nav-icon', false, false, true, () => this.selectNav(2)));
+		this.itemsNav.push(new NavbarItem(3, 'People', 'slab-icon-medium fa fa-user-o nav-icon', false, false, true, () => this.selectNav(3)));
+		this.itemsNav.push(new NavbarItem(4, 'Map', 'slab-icon-medium fa fa-map-o nav-icon', false, false, true, () => this.selectNav(4)));
 
 		this.loadTree();
 	}
