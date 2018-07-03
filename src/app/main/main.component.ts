@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { I18nService } from 'systelab-translate/lib/i18n.service';
 import { Router } from '@angular/router';
 import { MessagePopupService } from 'systelab-components/widgets/modal/message-popup/message-popup.service';
@@ -34,6 +34,9 @@ export class MainComponent implements OnInit {
 	public topSkill: Skill;
 	public currentSkill: Skill;
 	public organizationSummary: OrganizationSummary;
+
+	private frameWidth = 0;
+	private frameHeight = 0;
 	public itemsNav: NavbarItem[] = [];
 
 	constructor(private router: Router, protected messagePopupService: MessagePopupService,
@@ -42,13 +45,19 @@ export class MainComponent implements OnInit {
 	}
 
 	public ngOnInit() {
+		this.addHeaderMenu();
+		this.loadTree();
+	}
+
+	private addHeaderMenu(): void {
+		this.itemsNav = [];
 		this.itemsNav.push(new NavbarItem(0, 'Assessment', 'slab-icon-medium fa fa-exchange nav-icon', false, true, true, () => this.selectNav(0)));
-		this.itemsNav.push(new NavbarItem(1, 'Results', 'slab-icon-medium fa fa-graduation-cap nav-icon', false, false, true, () => this.selectNav(1)));
-		this.itemsNav.push(new NavbarItem(2, 'Organization', 'slab-icon-medium icon-home nav-icon', false, false, true, () => this.selectNav(2)));
+		if (this.frameWidth > 1025) {
+			this.itemsNav.push(new NavbarItem(1, 'Results', 'slab-icon-medium fa fa-graduation-cap nav-icon', false, false, true, () => this.selectNav(1)));
+			this.itemsNav.push(new NavbarItem(2, 'Organization', 'slab-icon-medium icon-home nav-icon', false, false, true, () => this.selectNav(2)));
+		}
 		this.itemsNav.push(new NavbarItem(3, 'People', 'slab-icon-medium fa fa-user-o nav-icon', false, false, true, () => this.selectNav(3)));
 		this.itemsNav.push(new NavbarItem(4, 'Map', 'slab-icon-medium fa fa-map-o nav-icon', false, false, true, () => this.selectNav(4)));
-
-		this.loadTree();
 	}
 
 	private loadTree() {
@@ -89,10 +98,13 @@ export class MainComponent implements OnInit {
 
 	public selectNav(navNum: number) {
 		this.currentNav = navNum;
-		this.itemsNav[navNum].isSelected = true;
 		for (let i = 0; i < this.itemsNav.length; i++) {
 			if (this.itemsNav[i].id !== navNum) {
 				this.itemsNav[i].isSelected = false;
+			}
+			else {
+				this.itemsNav[i].isSelected = true;
+
 			}
 		}
 		this.skillSelected(this.currentSkill);
@@ -100,6 +112,13 @@ export class MainComponent implements OnInit {
 
 	public doToggleSideBarVisibility() {
 		this.isSideBarVisible = !this.isSideBarVisible;
+	}
+
+	@HostListener('window:resize', ['$event'])
+	public onResize(event) {
+		this.frameWidth = (window.innerWidth);
+		this.frameHeight = (window.innerHeight);
+		this.addHeaderMenu();
 	}
 
 }
