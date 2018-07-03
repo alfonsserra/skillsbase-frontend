@@ -2,7 +2,7 @@
 
     <header (clickMenu)="doToggleSideBarVisibility()"></header>
 
-    <div class="slab-flex-1 d-flex">
+    <div *ngIf="organizationSummary" class="slab-flex-1 d-flex">
         <sidebar class="slab-overflow-container" [topSkill]="topSkill" [isVisible]="isSideBarVisible" (skillSelected)="skillSelected($event)"
         [(selectedMenuId)]="selectedMenuId"></sidebar>
 
