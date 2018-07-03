@@ -100,15 +100,8 @@ export class MainComponent implements OnInit {
 
 	public selectNav(navNum: number) {
 		this.currentNav = navNum;
-		for (let i = 0; i < this.itemsNav.length; i++) {
-			if (this.itemsNav[i].id !== navNum) {
-				this.itemsNav[i].isSelected = false;
-			}
-			else {
-				this.itemsNav[i].isSelected = true;
+		this.itemsNav.forEach((item) => item.isSelected = (item.id === navNum));
 
-			}
-		}
 		this.skillSelected(this.currentSkill);
 	}
 
