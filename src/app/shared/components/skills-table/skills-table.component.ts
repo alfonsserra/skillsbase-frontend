@@ -10,6 +10,7 @@ export class SkillsTableComponent {
 
 	@Input() public data: Array<SkillSummary>;
 	@Input() public isProficiency;
+	@Input() public withCounter = true;
 
 	constructor() {
 	}
