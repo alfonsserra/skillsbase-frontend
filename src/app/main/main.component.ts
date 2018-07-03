@@ -42,6 +42,8 @@ export class MainComponent implements OnInit {
 	constructor(private router: Router, protected messagePopupService: MessagePopupService,
 	            protected i18nService: I18nService, protected skillsTreeService: SkillsTreeService,
 	            protected assessmentService: AssessmentService, protected skillService: SkillService, protected summaryService: SummaryService) {
+		this.frameWidth = (window.innerWidth);
+		this.frameHeight = (window.innerHeight);
 	}
 
 	public ngOnInit() {
