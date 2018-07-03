@@ -13,6 +13,9 @@
   max-width: 300px;
   transition: all 0.3s;
 }
+.c-pointer {
+  cursor: pointer;
+}
 
 .sidebar.toggled {
   margin-left: -350px;
