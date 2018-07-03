@@ -13,7 +13,7 @@
             <skills-table [isProficiency]="false" [data]="topTenByInterest" [withCounter]="false"></skills-table>
         </div>
     </div>
-    <div class="row mt-1">
+    <div *ngIf="skillsToImprove.length>0" class="row mt-1">
         <div class="col-md-6">
             <skills-to-improve-table [data]="skillsToImprove"></skills-to-improve-table>
         </div>
