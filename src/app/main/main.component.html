@@ -6,8 +6,7 @@
         <sidebar class="slab-overflow-container" [topSkill]="topSkill" [isVisible]="isSideBarVisible" (skillSelected)="skillSelected($event)"
         [(selectedMenuId)]="selectedMenuId"></sidebar>
 
-        <summary *ngIf="!currentSkill && selectedMenuId==='ms'" [data]="organizationSummary" class="slab-flex-1 w-100 mt-4 slab-overflow-container"></summary>
-        <my-summary *ngIf="!currentSkill && selectedMenuId==='kti'" [skill]="topSkill" class="slab-flex-1 w-100 mt-4 slab-overflow-container"></my-summary>
+        <my-summary *ngIf="!currentSkill && selectedMenuId==='kti'" [data]="organizationSummary"  [skill]="topSkill" [withTitle]="false" class="slab-flex-1 w-100 mt-4 slab-overflow-container"></my-summary>
 
         <form *ngIf="currentSkill" class="w-100 slab-flex-1 d-flex flex-column">
 
@@ -17,9 +16,10 @@
 
             <skill-questionnaire *ngIf="currentNav===0" [skill]="currentSkill" [level]="1" class="slab-flex-1 w-100 p-4 container-fluid slab-overflow-container">
             </skill-questionnaire>
-            <compare *ngIf="currentNav===1" #compare class="d-flex slab-flex-1"></compare>
-            <top-users *ngIf="currentNav===2" #topusers [skill]="currentSkill" class="d-flex slab-flex-1 slab-overflow-container"></top-users>
-
+            <my-summary *ngIf="currentNav===1" #summary [skill]="currentSkill" class="d-flex slab-flex-1 slab-overflow-container" [withCounters]="false"></my-summary>
+            <compare *ngIf="currentNav===2" #compare class="d-flex slab-flex-1"></compare>
+            <top-users *ngIf="currentNav===3" #topusers [skill]="currentSkill" class="d-flex slab-flex-1 slab-overflow-container"></top-users>
+            <skills-map *ngIf="currentNav===4" #skillsmap [data]="organizationSummary" class="d-flex slab-flex-1"></skills-map>
         </form>
     </div>
 </div>

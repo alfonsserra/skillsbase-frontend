@@ -19,14 +19,15 @@ export class SkillsTreeService {
 
 	}
 
-	public initSkill(startingSkill: Skill) {
+	public initSkill(startingSkill: Skill, parent: number) {
 		startingSkill.isProficiencyAssessed = false;
 		startingSkill.isInterestAssessed = false;
 		startingSkill.proficiency = 0;
 		startingSkill.interest = 0;
+		startingSkill.parent = parent;
 
 		if (startingSkill.children) {
-			startingSkill.children.forEach((skill) => this.initSkill(skill));
+			startingSkill.children.forEach((skill) => this.initSkill(skill, startingSkill.id));
 		}
 	}
 
@@ -91,15 +92,43 @@ export class SkillsTreeService {
 		return skills;
 	}
 
+	public getSkill(startingSkill: Skill, id: number): Skill {
+		if (startingSkill.id === id) {
+			return startingSkill;
+		} else {
+			if (startingSkill.children) {
+				for (let i = 0; i < startingSkill.children.length; i++) {
+					const skill = this.getSkill(startingSkill.children[i], id);
+					if (skill !== undefined) {
+						return skill;
+					}
+				}
+			}
+		}
+		return undefined;
+	}
+
+	public isSkillDescendantOf(startingSkill: Skill, idToCheck: number) {
+		const skills: Array<Skill> = this.getSkillAsListFromRoot(this.getSkill(startingSkill, startingSkill.id));
+		for (let i = 0; i < skills.length; i++) {
+			if (skills[i].id === idToCheck) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public getNumberOfSkills(startingSkill: Skill, onlyAssessed = false): number {
 
 		let total = 1;
-		if (onlyAssessed) {
-			total = startingSkill.isProficiencyAssessed && startingSkill.isInterestAssessed ? 1 : 0;
-		}
-		if (startingSkill.children) {
-			for (let i = 0; i < startingSkill.children.length; i++) {
-				total += this.getNumberOfSkills(startingSkill.children[i], onlyAssessed);
+		if (startingSkill) {
+			if (onlyAssessed) {
+				total = startingSkill.isProficiencyAssessed && startingSkill.isInterestAssessed ? 1 : 0;
+			}
+			if (startingSkill.children) {
+				for (let i = 0; i < startingSkill.children.length; i++) {
+					total += this.getNumberOfSkills(startingSkill.children[i], onlyAssessed);
+				}
 			}
 		}
 		return total;
@@ -174,16 +203,18 @@ export class SkillsTreeService {
 
 	public getSkillsKeenToImprove(startingSkill: Skill): Array<SkillToImprovement> {
 		let skills = new Array<SkillToImprovement>();
-		if (startingSkill.interest > startingSkill.proficiency) {
-			skills.push({
-				text:        startingSkill.text,
-				current:     startingSkill.proficiency,
-				improvement: (startingSkill.interest - startingSkill.proficiency)
-			});
-		}
-		if (startingSkill.children) {
-			for (let i = 0; i < startingSkill.children.length; i++) {
-				skills = skills.concat(this.getSkillsKeenToImprove(startingSkill.children[i]));
+		if (startingSkill) {
+			if (startingSkill.interest > startingSkill.proficiency) {
+				skills.push({
+					text:        startingSkill.text,
+					current:     startingSkill.proficiency,
+					improvement: (startingSkill.interest - startingSkill.proficiency)
+				});
+			}
+			if (startingSkill.children) {
+				for (let i = 0; i < startingSkill.children.length; i++) {
+					skills = skills.concat(this.getSkillsKeenToImprove(startingSkill.children[i]));
+				}
 			}
 		}
 		return skills;
@@ -191,23 +222,26 @@ export class SkillsTreeService {
 
 	public getMySkillsSummary(startingSkill: Skill, isProficiency: boolean): Array<SkillSummary> {
 		let skills = new Array<SkillSummary>();
-		if (isProficiency && startingSkill.isProficiencyAssessed) {
-			skills.push({
-				id:   startingSkill.id,
-				text: startingSkill.text,
-				rate: Number(startingSkill.proficiency)
-			});
-		}
-		if (!isProficiency && startingSkill.isInterestAssessed) {
-			skills.push({
-				id:   startingSkill.id,
-				text: startingSkill.text,
-				rate: Number(startingSkill.interest)
-			});
-		}
-		if (startingSkill.children) {
-			for (let i = 0; i < startingSkill.children.length; i++) {
-				skills = skills.concat(this.getMySkillsSummary(startingSkill.children[i], isProficiency));
+		if (startingSkill) {
+
+			if (isProficiency && startingSkill.isProficiencyAssessed) {
+				skills.push({
+					id:   startingSkill.id,
+					text: startingSkill.text,
+					rate: Number(startingSkill.proficiency)
+				});
+			}
+			if (!isProficiency && startingSkill.isInterestAssessed) {
+				skills.push({
+					id:   startingSkill.id,
+					text: startingSkill.text,
+					rate: Number(startingSkill.interest)
+				});
+			}
+			if (startingSkill.children) {
+				for (let i = 0; i < startingSkill.children.length; i++) {
+					skills = skills.concat(this.getMySkillsSummary(startingSkill.children[i], isProficiency));
+				}
 			}
 		}
 		return skills;

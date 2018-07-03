@@ -12,6 +12,8 @@ import { SummaryService } from '../shared/api/summary.service';
 import { OrganizationSummary } from '../shared/model/organization-summary';
 import { TopUsersComponent } from './top-users/top-users.component';
 import { SkillsTreeService } from './skills-tree.service';
+import { MySummaryComponent } from './mysummary/my-summary.component';
+import { SkillsMapComponent } from './skills-map/skills-map.component';
 
 @Component({
 	selector:    'main',
@@ -22,8 +24,9 @@ export class MainComponent implements OnInit {
 
 	@ViewChild('compare') compare: CompareComponent;
 	@ViewChild('topusers') topusers: TopUsersComponent;
-
-	selectedMenuId = 'ms';
+	@ViewChild('summary') summary: MySummaryComponent;
+	@ViewChild('skillsmap') skillsmap: SkillsMapComponent;
+	selectedMenuId = 'kti';
 
 	public isSideBarVisible = true;
 	public currentNav = 0;
@@ -40,8 +43,11 @@ export class MainComponent implements OnInit {
 
 	public ngOnInit() {
 		this.itemsNav.push(new NavbarItem(0, 'Assessment', '', false, true, true, () => this.selectNav(0)));
-		this.itemsNav.push(new NavbarItem(1, 'Organization', '', false, false, true, () => this.selectNav(1)));
-		this.itemsNav.push(new NavbarItem(2, 'Top ten', '', false, false, true, () => this.selectNav(2)));
+		this.itemsNav.push(new NavbarItem(1, 'Results', '', false, false, true, () => this.selectNav(1)));
+		this.itemsNav.push(new NavbarItem(2, 'Organization', '', false, false, true, () => this.selectNav(2)));
+		this.itemsNav.push(new NavbarItem(3, 'People', '', false, false, true, () => this.selectNav(3)));
+		this.itemsNav.push(new NavbarItem(4, 'Map', '', false, false, true, () => this.selectNav(4)));
+
 		this.loadTree();
 	}
 
@@ -50,7 +56,7 @@ export class MainComponent implements OnInit {
 			.subscribe(
 				(skill) => {
 					this.topSkill = skill;
-					this.skillsTreeService.initSkill(this.topSkill);
+					this.skillsTreeService.initSkill(this.topSkill, undefined);
 					this.skillsTreeService.loadUserAssessment(this.topSkill);
 					this.skillsTreeService.loadOrganizationSummary(this.topSkill)
 						.subscribe(
@@ -62,12 +68,23 @@ export class MainComponent implements OnInit {
 
 	public skillSelected(skill: Skill) {
 		this.currentSkill = skill;
-		if (this.compare) {
-			this.compare.doUpdate(skill);
-		}
-		if (this.topusers) {
-			this.topusers.doUpdate(skill);
-		}
+
+		timer(200)
+			.subscribe(
+				() => {
+					if (this.compare) {
+						this.compare.doUpdate(skill);
+					}
+					if (this.topusers) {
+						this.topusers.doUpdate(skill);
+					}
+					if (this.summary) {
+						this.summary.doUpdate(skill);
+					}
+					if (this.skillsmap) {
+						this.skillsmap.doUpdate(skill);
+					}
+				});
 	}
 
 	public selectNav(navNum: number) {
@@ -78,14 +95,7 @@ export class MainComponent implements OnInit {
 				this.itemsNav[i].isSelected = false;
 			}
 		}
-		timer(200)
-			.subscribe(
-				() => {
-					if (this.compare) {
-						this.compare.doUpdate(this.currentSkill);
-					}
-				}
-			);
+		this.skillSelected(this.currentSkill);
 	}
 
 	public doToggleSideBarVisibility() {

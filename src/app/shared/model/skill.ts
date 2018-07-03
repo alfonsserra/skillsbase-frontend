@@ -11,40 +11,41 @@
  */
 
 export interface Skill {
-  children?: Array<Skill>;
+	children?: Array<Skill>;
 
-  comments?: string;
+	comments?: string;
 
-  /**
-   * Skill ID
-   */
-  id?: number;
+	/**
+	 * Skill ID
+	 */
+	id?: number;
 
-  useInStatistics?: boolean;
+	useInStatistics?: boolean;
 
-  companyInterest?: number;
+	companyInterest?: number;
 
-  level?: number;
+	level?: number;
 
-  position?: number;
+	position?: number;
 
-  text?: string;
+	text?: string;
 
-  type?: Skill.TypeEnum;
+	type?: Skill.TypeEnum;
 
-  interest?: number;
-  proficiency?: number;
+	interest?: number;
+	proficiency?: number;
 
-  isProficiencyAssessed?: boolean;
-  isInterestAssessed?: boolean;
+	isProficiencyAssessed?: boolean;
+	isInterestAssessed?: boolean;
 
+	averageInterest?: number;
+	averageProficiency?: number;
 
-  averageInterest?: number;
-  averageProficiency?: number;
+	parent?: number;
 }
 
 export namespace Skill {
-  export type TypeEnum = 'category' | 'skill';
+	export type TypeEnum = 'category' | 'skill';
 }
 
 

@@ -1,12 +1,7 @@
-<div class="container-fluid">
-    <div class="row mt-1">
-        <div class="col-md-4">
-            <systelab-percentage-circle [value]="proficiency" [text]="'proficiency'"></systelab-percentage-circle>
-        </div>
-        <div class="col-md-4">
-            <systelab-percentage-circle [value]="interest" [text]="'interest'" [color]="'green'"></systelab-percentage-circle>
-        </div>
-        <div class="col-md-4">
+<div class="container-fluid mt-2">
+    <h4 *ngIf="withTitle">{{skill.text}}</h4>
+    <div *ngIf="withCounters" class="row mt-1">
+        <div class="col-md-4 ml-auto mb-2">
             <systelab-percentage-circle [value]="percentageOfCompletion" [text]="'Completion'" [color]="'green'"></systelab-percentage-circle>
         </div>
     </div>

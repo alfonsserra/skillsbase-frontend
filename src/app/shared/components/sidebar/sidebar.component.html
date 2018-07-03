@@ -1,6 +1,5 @@
 <div class="sidebar bg-dark slab-overflow-container" [class.toggled]="!isVisible">
     <ul class="list-unstyled">
-        <li [class.selected]="selectedMenuId==='ms'"><a (click)="select('ms',undefined)"><i class="fa fa-life-ring"></i> Global Summary</a></li>
         <li [class.selected]="selectedMenuId==='kti'"><a (click)="select('kti',undefined)"><i class="fa fa-life-ring"></i> My Summary</a></li>
         <ng-container *ngIf="topSkill && topSkill.children">
             <li *ngFor="let skill of topSkill.children">

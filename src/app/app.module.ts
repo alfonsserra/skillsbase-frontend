@@ -21,7 +21,6 @@ import { GridContextMenuComponent } from 'systelab-components/widgets/grid/conte
 import { GridHeaderContextMenuComponent } from 'systelab-components/widgets/grid/contextmenu/grid-header-context-menu.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { DndModule } from 'ng2-dnd';
-import { SummaryComponent } from './main/summary/summary.component';
 import { SkillQuestionnaireComponent } from './main/skill/skill-questionnaire.component';
 import { SystelabChartsModule } from 'systelab-charts';
 import { HeaderComponent } from './shared/components/header/header.component';
@@ -34,6 +33,7 @@ import { SubSideBarComponent } from './shared/components/sidebar/subsidebar.comp
 import { MySummaryComponent } from './main/mysummary/my-summary.component';
 import { SkillsToImproveComponent } from './shared/components/skills-to-improve-table/skills-to-improve-table.component';
 import { MarkdownModule } from 'ngx-markdown';
+import { SkillsMapComponent } from './main/skills-map/skills-map.component';
 
 @NgModule({
 	imports:         [
@@ -60,7 +60,6 @@ import { MarkdownModule } from 'ngx-markdown';
 		PageNotFoundComponent,
 		LoginComponent,
 		SkillQuestionnaireComponent,
-		SummaryComponent,
 		CompareComponent,
 		SideBarComponent,
 		SubSideBarComponent,
@@ -68,7 +67,8 @@ import { MarkdownModule } from 'ngx-markdown';
 		TopUsersComponent,
 		UsersTableComponent,
 		MySummaryComponent,
-		SkillsToImproveComponent
+		SkillsToImproveComponent,
+		SkillsMapComponent
 	],
 	providers:       [
 		{provide: BASE_PATH, useValue: environment.API_BASE_PATH},

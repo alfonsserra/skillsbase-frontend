@@ -13,17 +13,13 @@ export class SubSkill {
 	selector:    'top-users',
 	templateUrl: 'top-users.component.html'
 })
-export class TopUsersComponent implements OnInit {
+export class TopUsersComponent {
 
 	@Input() public skill: Skill;
 
 	public skillsList = [];
 
 	constructor(protected summaryService: SummaryService) {
-	}
-
-	public ngOnInit() {
-		this.loadTopUsers();
 	}
 
 	public doUpdate(skill: Skill) {
