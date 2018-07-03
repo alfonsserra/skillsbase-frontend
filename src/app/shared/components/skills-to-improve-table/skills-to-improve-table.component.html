@@ -2,15 +2,15 @@
     <thead>
     <tr>
         <th>Skills to improve</th>
-        <th>Improvement</th>
-        <th>Current</th>
+        <th class="column-results">Improvement</th>
+        <th class="column-results">Current</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let skill of (data ? data.slice(0,10): [])">
         <td>{{skill.text}}</td>
-        <td>{{skill.improvement}}</td>
-        <td>{{skill.current}}</td>
+        <td class="column-results">{{skill.improvement}}</td>
+        <td class="column-results">{{skill.current}}</td>
     </tr>
     </tbody>
 </table>

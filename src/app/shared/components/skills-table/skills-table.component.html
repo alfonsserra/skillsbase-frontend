@@ -2,15 +2,15 @@
     <thead>
     <tr>
         <th><i class="fa" [class.fa-heart-o]="!isProficiency" [class.fa-thumbs-o-up]="isProficiency" ></i> {{isProficiency?"Proficiency":"Interest"}}</th>
-        <th>Average</th>
-        <th>#</th>
+        <th class="column-results">Average</th>
+        <th class="column-number">#</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let skill of (data ? data.slice(0,10): [])">
         <td>{{skill.text}}</td>
-        <td>{{skill.rate| number:'1.0-2'}}</td>
-        <td>{{skill.counter}}</td>
+        <td class="column-results">{{skill.rate| number:'1.0-2'}}</td>
+        <td class="column-number">{{skill.counter}}</td>
     </tr>
     </tbody>
 </table>

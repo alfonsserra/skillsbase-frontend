@@ -2,13 +2,13 @@
     <thead>
     <tr>
         <th>User</th>
-        <th><i class="fa" [class.fa-heart-o]="!isProficiency" [class.fa-thumbs-o-up]="isProficiency" ></i> {{isProficiency?"Proficiency":"Interest"}}</th>
+        <th class="column-results"><i class="fa" [class.fa-heart-o]="!isProficiency" [class.fa-thumbs-o-up]="isProficiency" ></i> {{isProficiency?"Proficiency":"Interest"}}</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let userrate of data">
         <td>{{userrate.user.surname}}, {{userrate.user.name}}</td>
-        <td>{{userrate.rate| number:'1.0-2'}}</td>
+        <td class="column-results">{{userrate.rate| number:'1.0-2'}}</td>
     </tr>
     </tbody>
 </table>
