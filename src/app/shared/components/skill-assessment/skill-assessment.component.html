@@ -1,0 +1,19 @@
+<div class="row">
+    <label *ngIf="level" class="col-md-4 mt-2 col-form-label label-padding-{{level+1}}" [class.partial]="!skill.isProficiencyAssessed || !skill.isInterestAssessed">{{skill.text}}</label>
+    <label *ngIf="!level" class="col-md-4 mt-2 col-form-label">&nbsp;</label>
+    <div class="col-md-4  mt-2 d-flex">
+        <i class="fa fa-thumbs-o-up image-proficiency"></i>
+        <systelab-slider [continuous]="false" [(value)]="skill.proficiency" [min]="0" [max]="5" [step]="1" name="slider1"
+                         (valueChange)="changeProficiencySlider(skill)" class="slab-flex-1 mr-2 ml-2"></systelab-slider>
+        <span class="badge badge-success badge-position">{{skill.isProficiencyAssessed?skill.proficiency:'-'}}</span>
+
+    </div>
+    <div class="col-md-4 mt-2 d-flex">
+        <i class="fa fa-heart-o image-interest d-block d-sm-none"></i>
+        <span class="badge badge-success badge-position d-none d-sm-block">{{skill.isInterestAssessed?skill.interest:'-'}}</span>
+        <systelab-slider [continuous]="false" [(value)]="skill.interest" [min]="0" [max]="5" [step]="1" name="slider2"
+                         (valueChange)="changeInterestSlider(skill)" class="slab-flex-1 mr-2 ml-2"></systelab-slider>
+        <span class="badge badge-success badge-position d-block d-sm-none">{{skill.isInterestAssessed?skill.interest:'-'}}</span>
+        <i class="fa fa-heart-o image-interest d-none d-sm-block"></i>
+    </div>
+</div>

@@ -34,6 +34,7 @@ import { MySummaryComponent } from './main/mysummary/my-summary.component';
 import { SkillsToImproveComponent } from './shared/components/skills-to-improve-table/skills-to-improve-table.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { SkillsMapComponent } from './main/skills-map/skills-map.component';
+import { SkillAssessmentComponent } from './shared/components/skill-assessment/skill-assessment.component';
 
 @NgModule({
 	imports:         [
@@ -68,6 +69,7 @@ import { SkillsMapComponent } from './main/skills-map/skills-map.component';
 		UsersTableComponent,
 		MySummaryComponent,
 		SkillsToImproveComponent,
+		SkillAssessmentComponent,
 		SkillsMapComponent
 	],
 	providers:       [
